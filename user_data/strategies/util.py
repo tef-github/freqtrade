@@ -1,7 +1,8 @@
 import subprocess
 import threading
 from user_data.strategies.config import Config
-import time
+import time, random
+
 
 def execute(mode, coin, brain):
     if Config.IS_PARALLEL_EXECUTION:
@@ -9,13 +10,18 @@ def execute(mode, coin, brain):
     else:
         _perform_execute(mode, coin, brain)
 
+
 def _perform_execute(mode, coin, brain):
-        subprocess.call("python3 "+Config.EXECUTION_PATH+"launcher.py " + mode + " " + coin + " " + brain, shell=True)
+    subprocess.call("python3 " + Config.EXECUTION_PATH + "launcher.py " + mode + " " + coin + " " + brain + " " + get_execution_id(), shell=True)
+
 
 def _perform_back_test(date_time, coin, brain):
     date = str(date_time)
     date = date.replace(" ", "#")
-    subprocess.call("python3 "+ Config.EXECUTION_PATH + "back_tester.py " + date + " " + coin + " " + brain + " " + Config.BACKTEST_DUP + " " + Config.BACKTEST_MAX_COUNT_DUP, shell=True)
+    subprocess.call(
+        "python3 " + Config.EXECUTION_PATH + "back_tester.py " + date + " " + coin + " " + brain + " " + Config.BACKTEST_DUP + " " + Config.BACKTEST_MAX_COUNT_DUP + " " + get_execution_id(),
+        shell=True)
+
 
 def back_test(date_time, coin, brain):
     time.sleep(Config.BACKTEST_THROTTLE_SECOND)
@@ -23,3 +29,8 @@ def back_test(date_time, coin, brain):
         threading.Thread(target=_perform_back_test, args=(date_time, coin, brain)).start()
     else:
         _perform_back_test(date_time, coin, brain)
+
+
+def get_execution_id():
+    return str(chr(random.randrange(65, 65 + 26))) + "-" + str(time.time())
+
