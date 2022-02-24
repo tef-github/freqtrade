@@ -20,7 +20,7 @@ def write_sell_signal(pair, brain):
 
 
 def get_file_name(pair, brain):
-    return pair + "_" + brain + ".txt"
+    return brain + "_" + pair
 
 
 def get_full_file_path_name(pair, brain):
