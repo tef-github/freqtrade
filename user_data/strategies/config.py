@@ -13,3 +13,4 @@ class Config:
     EXECUTION_PATH = "/root/" + WORKSPACE_PATH + "/execution/"
     IS_PARALLEL_EXECUTION = True
     BACKTEST_THROTTLE_SECOND = 1
+    EXECUTION_COMMUNICATION_FILE_PATH = EXECUTION_PATH + "communication_files"
