@@ -1,14 +1,27 @@
+import os
+
+from user_data.strategies.config import Config
+
+
 def write_execution_file(pair, brain):
-    # todo: write a file brain_pair.txt
-    # create dir if doesnt exist : Config.EXECUTION_COMMUNICATION_FILE_PATH
-    pass
+    if not os.path.exists(Config.EXECUTION_COMMUNICATION_FILE_PATH):
+        os.makedirs(Config.EXECUTION_COMMUNICATION_FILE_PATH)
+    os.mknod(get_full_file_path_name(pair, brain))
 
 
 def execution_exists(pair, brain):
-    # todo: check if a file brain_pair.txt exists in dir
-    return True
+    return os.path.exists(get_full_file_path_name(pair, brain))
 
 
 def write_sell_signal(pair, brain):
-    # todo: write sell signal in brain_pair.txt
-    return True
+    f = open(get_full_file_path_name(pair, brain), "a")
+    f.write("sell_signal")
+    f.close()
+
+
+def get_file_name(pair, brain):
+    return pair + "_" + brain + ".txt"
+
+
+def get_full_file_path_name(pair, brain):
+    return Config.EXECUTION_COMMUNICATION_FILE_PATH + get_file_name(pair, brain)
