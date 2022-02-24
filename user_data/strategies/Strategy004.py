@@ -19,7 +19,10 @@ from user_data.strategies.notifier import send_start_deliminator_message
 
 class Strategy004(IStrategy):
     if Config.IS_BACKTEST:
-        send_start_deliminator_message('Freq Strategy004 ',Config.BACKTEST_COIN ,Config.BACKTEST_MONTH_LIST[Config.BACKTEST_DATA_CLEANER_MONTH_INDEX], Config.BACKTEST_DATA_CLEANER_YEAR, Config.BACKTEST_DUP, Config.BACKTEST_MAX_COUNT_DUP)
+        send_start_deliminator_message('Freq Strategy004 ', Config.BACKTEST_COIN,
+                                       Config.BACKTEST_MONTH_LIST[Config.BACKTEST_DATA_CLEANER_MONTH_INDEX],
+                                       Config.BACKTEST_DATA_CLEANER_YEAR, Config.BACKTEST_DUP,
+                                       Config.BACKTEST_MAX_COUNT_DUP)
     """
     Strategy 004
     author@: Gerald Lonlas
@@ -196,6 +199,8 @@ class Strategy004(IStrategy):
                 back_test(current_time, coin, brain)
             elif Config.IS_EXECUTION:
                 execute(mode, coin, brain)
+        else:
+            print("Warning: " + coin + " " + brain + " execution exists. Ignoring signal. ********")
 
         return True
 

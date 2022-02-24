@@ -1,4 +1,3 @@
-
 # --- Do not remove these libs ---
 import threading
 
@@ -11,18 +10,21 @@ from pandas import DataFrame
 
 import talib.abstract as ta
 import freqtrade.vendor.qtpylib.indicators as qtpylib
-import numpy # noqa
+import numpy  # noqa
 from datetime import datetime
 
 from user_data.strategies.file_util import execution_exists, write_execution_file, write_sell_signal
-from user_data.strategies.util import  back_test, execute
+from user_data.strategies.util import back_test, execute
 from user_data.strategies.config import Config
 from user_data.strategies.notifier import send_start_deliminator_message
 
 
 class Strategy003(IStrategy):
     if Config.IS_BACKTEST:
-        send_start_deliminator_message('Freq Strategy003 ',Config.BACKTEST_COIN ,Config.BACKTEST_MONTH_LIST[Config.BACKTEST_DATA_CLEANER_MONTH_INDEX], Config.BACKTEST_DATA_CLEANER_YEAR, Config.BACKTEST_DUP, Config.BACKTEST_MAX_COUNT_DUP)
+        send_start_deliminator_message('Freq Strategy003 ', Config.BACKTEST_COIN,
+                                       Config.BACKTEST_MONTH_LIST[Config.BACKTEST_DATA_CLEANER_MONTH_INDEX],
+                                       Config.BACKTEST_DATA_CLEANER_YEAR, Config.BACKTEST_DUP,
+                                       Config.BACKTEST_MAX_COUNT_DUP)
     """
     Strategy 003
     author@: Gerald Lonlas
@@ -35,10 +37,10 @@ class Strategy003(IStrategy):
     # Minimal ROI designed for the strategy.
     # This attribute will be overridden if the config file contains "minimal_roi"
     minimal_roi = {
-        "60":  0.01,
-        "30":  0.03,
-        "20":  0.04,
-        "0":  0.05
+        "60": 0.01,
+        "30": 0.03,
+        "20": 0.04,
+        "0": 0.05
     }
 
     # Optimal stoploss designed for the strategy
@@ -132,17 +134,17 @@ class Strategy003(IStrategy):
         """
         dataframe.loc[
             (
-                (dataframe['rsi'] < 28) &
-                (dataframe['rsi'] > 0) &
-                (dataframe['close'] < dataframe['sma']) &
-                (dataframe['fisher_rsi'] < -0.94) &
-                (dataframe['mfi'] < 16.0) &
-                (
-                    (dataframe['ema50'] > dataframe['ema100']) |
-                    (qtpylib.crossed_above(dataframe['ema5'], dataframe['ema10']))
-                ) &
-                (dataframe['fastd'] > dataframe['fastk']) &
-                (dataframe['fastd'] > 0)
+                    (dataframe['rsi'] < 28) &
+                    (dataframe['rsi'] > 0) &
+                    (dataframe['close'] < dataframe['sma']) &
+                    (dataframe['fisher_rsi'] < -0.94) &
+                    (dataframe['mfi'] < 16.0) &
+                    (
+                            (dataframe['ema50'] > dataframe['ema100']) |
+                            (qtpylib.crossed_above(dataframe['ema5'], dataframe['ema10']))
+                    ) &
+                    (dataframe['fastd'] > dataframe['fastk']) &
+                    (dataframe['fastd'] > 0)
             ),
             'buy'] = 1
 
@@ -156,8 +158,8 @@ class Strategy003(IStrategy):
         """
         dataframe.loc[
             (
-                (dataframe['sar'] > dataframe['close']) &
-                (dataframe['fisher_rsi'] > 0.3)
+                    (dataframe['sar'] > dataframe['close']) &
+                    (dataframe['fisher_rsi'] > 0.3)
             ),
             'sell'] = 1
         return dataframe
@@ -196,6 +198,8 @@ class Strategy003(IStrategy):
                 back_test(current_time, coin, brain)
             elif Config.IS_EXECUTION:
                 execute(mode, coin, brain)
+        else:
+            print("Warning: " + coin + " " + brain + " execution exists. Ignoring signal. ********")
 
         return True
 

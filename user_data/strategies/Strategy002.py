@@ -178,6 +178,8 @@ class Strategy002(IStrategy):
                 back_test(current_time, coin, brain)
             elif Config.IS_EXECUTION:
                 execute(mode, coin, brain)
+        else:
+            print("Warning: " + coin + " " + brain + " execution exists. Ignoring signal. ********")
         
         return True
 
