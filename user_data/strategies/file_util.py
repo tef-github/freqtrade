@@ -3,9 +3,13 @@ import os
 from user_data.strategies.config import Config
 
 
-def write_execution_file(pair, brain):
+def create_dir():
     if not os.path.exists(Config.EXECUTION_COMMUNICATION_FILE_PATH):
         os.makedirs(Config.EXECUTION_COMMUNICATION_FILE_PATH)
+
+
+def write_execution_file(pair, brain):
+    create_dir()
     os.mknod(get_full_file_path_name(pair, brain))
 
 
