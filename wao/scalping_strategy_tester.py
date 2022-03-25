@@ -49,8 +49,8 @@ def get_year_range() -> str:
 
 def write_to_csv(list_of_row):
     print("write_to_csv:... ")
-    column_title = ['coin', 'Brain', 'human_readable_time', 'timeframe', 'win_rate_percentage_per_day',
-                    'number_of_trades_per_day', 'average_percentage_per_trade', 'cumulative_percentage_per_day']
+    column_title = ['coin', 'Brain', 'human_readable_time', 'timeframe',
+                    'number_of_trades_per_day', 'average_percentage_per_trade']
     year_range = get_year_range()
     if not os.path.exists(result_saved_directory):
         os.makedirs(result_saved_directory)
@@ -95,8 +95,6 @@ def parse_scalping_strategy_result() -> list:
         out_put_to_be_parsed = run_scalping_strategy_command()
         number_of_trades_per_day = out_put_to_be_parsed.split("|")[13].replace(" ", "")
         average_percentage_per_trade = out_put_to_be_parsed.split("|")[14].replace(" ", "")
-        cumulative_percentage_per_day = out_put_to_be_parsed.split("|")[15].replace(" ", "")
-        win_rate_percentage_per_day = out_put_to_be_parsed.split("|")[19].split(" ")[17].replace(" ", "")
         list_of_row_items.append(coin)
         list_of_row_items.append(brain_name)
         unix_time = json_file_content[counter]
@@ -104,10 +102,8 @@ def parse_scalping_strategy_result() -> list:
         readable_time = get_human_readable_time_from_timestamp(unix_time)
         list_of_row_items.append(str(readable_time))
         list_of_row_items.append(time_range)
-        list_of_row_items.append(win_rate_percentage_per_day)
         list_of_row_items.append(number_of_trades_per_day)
         list_of_row_items.append(average_percentage_per_trade)
-        list_of_row_items.append(cumulative_percentage_per_day)
         list_of_rows.append(list_of_row_items)
         counter += minutes_per_day
     return list_of_rows
