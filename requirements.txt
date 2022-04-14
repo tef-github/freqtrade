@@ -37,6 +37,13 @@ pyjwt==2.3.0
 aiofiles==0.8.0
 psutil==5.9.0
 
+python-binance
+websocket_client
+event-bus
+binance-futures
+watchdog~=2.1.6
+
+
 # Support for colorized terminal output
 colorama==0.4.4
 # Building config files interactively

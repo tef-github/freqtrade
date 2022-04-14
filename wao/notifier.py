@@ -1,4 +1,4 @@
-EXECUTION_PATH = '/root/workspace/execution'  # do not move this to brain_config.py
+EXECUTION_PATH = '/root/workspace2/execution'  # do not move this to brain_config.py
 
 import requests
 import sys
@@ -14,7 +14,15 @@ TELEGRAM_RESPONSE_200 = "<Response [200]>"
 
 def send_start_deliminator_message(brain, coin, month, year, dup, max_counter_dup):
     print("notifier: send_start_deliminator_message: ")
-    text = "========" + str(brain) + " DUP = " + str(dup) + " MAX_COUNTER_DUP = " + max_counter_dup + " " + str(
+    print("month-------------------",month)
+    print("type of month-----------",type(month))
+    print("year-------------------",year)
+    print("type of year-----------",type(year))
+    print("dup-------------------",dup)
+    print("type of dup-----------",type(dup))
+    print("dup-------------------",max_counter_dup)
+    print("type of max_counter_dup-----------",type(max_counter_dup))
+    text = "========" + str(brain) + " DUP = " + str(dup) + " MAX_COUNTER_DUP = " + str(max_counter_dup) + " " + str(
         coin) + " " + str(month) + " " + str(year) + "=======>"
 
     post_request(text)
