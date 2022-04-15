@@ -11,5 +11,5 @@ class BrainConfig:
     WORKSPACE_PATH = "workspace2" if IS_BACKTEST else "workspace"
     _429_DIRECTORY = "/root/" + WORKSPACE_PATH + "/freqtrade/_429_directory/"
     IS_PARALLEL_EXECUTION = True
-    BACKTEST_THROTTLE_SECOND = 0.000001
+    BACKTEST_THROTTLE_SECOND = 1
     IS_429_FIX_ENABLED = False
