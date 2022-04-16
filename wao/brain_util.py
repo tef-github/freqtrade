@@ -10,14 +10,14 @@ from wao._429_watcher import _429_Watcher
 
 sys.path.append(EXECUTION_PATH)
 from config import Config
-from romeo import Romeo
+from romeo import Romeo, RomeoExitPriceType
 
 
-def perform_execute_buy(mode, coin, brain, romeo_pool):
+def perform_execute_buy(coin, brain, romeo_pool):
     is_test_mode = False
-    if mode == Config.MODE_TEST:
+    if BrainConfig.MODE == Config.MODE_TEST:
         is_test_mode = True
-    elif mode == Config.MODE_PROD:
+    elif BrainConfig.MODE == Config.MODE_PROD:
         is_test_mode = False
 
     Config.COIN = coin
@@ -29,9 +29,10 @@ def perform_execute_buy(mode, coin, brain, romeo_pool):
 
 
 def perform_execute_sell(coin, romeo_pool):
-    romeo = romeo_pool.get(coin)
-    if romeo is not None:
-        romeo.perform_sell_signal(RomeoExitPriceType.SS)
+    if Config.ROMEO_IS_PT_FROM_BRAIN_SS_ENABLED:
+        romeo = romeo_pool.get(coin)
+        if romeo is not None:
+            romeo.perform_sell_signal(RomeoExitPriceType.SS)
 
 
 def perform_back_test_sell(date_time):
@@ -77,9 +78,8 @@ def perform_create_429_watcher():
 
 
 def setup_429():
-    if BrainConfig.IS_429_FIX_ENABLED:
-        __create_429_directory()
-        __create_429_watcher()
+    __create_429_directory()
+    __create_429_watcher()
 
 
 def __create_429_directory():
