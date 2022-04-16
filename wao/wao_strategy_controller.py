@@ -6,12 +6,8 @@ from wao.notifier import send_start_deliminator_message
 import time
 
 
-<<<<<<< HEAD:wao/strategy_controller.py
-class StrategyController:
-=======
 class WAOStrategyController:
     # romeo_pool: key=coin, value=romeo_instance
->>>>>>> stable:wao/wao_strategy_controller.py
     romeo_pool = {}
     brain = ""
 

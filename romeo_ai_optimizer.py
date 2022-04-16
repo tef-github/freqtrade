@@ -20,7 +20,7 @@ class Romeo_ai_optimizer:
         self.best_combination = [0,0,0]
         self.indentation = "    "   
         self.brain_config_dir = "wao/brain_config.py"
-        self.strategy_configuration = [{"config":"config2.json","strategy":"Strategy002"},{"config":"config3.json","strategy":"Strategy003"},{"config":"config4.json","strategy":"Strategy004"}]
+        self.strategy_configuration = [{"config":"config2.json","strategy":"Strategy002"}]
         self.cumulative_profit_path = '../execution/_cumulative_profit.txt'
 
     def get_month_string(self,month):
@@ -97,7 +97,7 @@ class Romeo_ai_optimizer:
                     cd ../execution/;
                     python3 month_data_download.py BTC """+self.get_month_string(int(month)-1)+""" """+str(year)+""";
                     cd ../freqtrade;
-                    screen -L -Logfile logfile.txt freqtrade backtesting -c """+strategy["config"]+""" -s """+strategy["strategy"]+""";
+                    screen -L -Logfile Logfile-BTC-Strategy002-Backtest-12:41:00-April-16-2022.txt freqtrade backtesting -c """+strategy["config"]+""" -s """+strategy["strategy"]+""";
                     """
                     print(commands)
                     os.system(commands)
