@@ -85,35 +85,35 @@ class Romeo_ai_optimizer:
         self.change_month_year_for_data_cleaner(int(month)-1,year)
 
         for strategy in self.strategy_configuration:
-            for dup in self.float_range(self.DUP_FLOOR,self.DUP_CEILING,self.DUP_STEP_FORWARD):
-                for dup_max_counter in self.float_range(self.MAX_COUNT_DUP_FLOOR,self.MAX_COUNT_DUP_CEILING,self.MAX_COUNT_DUP_STEP_FORWARD):
-                    # Change the parameters in brain_config2022-04-12 16:30:48,856 - freqtrade - ERROR - Incorrect syntax for 2022-04-12 16:30:48,856 - freqtrade - ERROR - Incorrect syntax for timerange "2020101-2020201"timerange "2020101-2020201"
-                    self.change_parameters_in_config(dup,dup_max_counter)
-                    # download the data
-                    # source ./.env/bin/activate;
-                    commands = """
-                    freqtrade download-data --config """+strategy["config"]+""" -t 5m --timerange """+str(year)+self.get_month_string(int(month))+"""01-"""+str(year)+self.get_month_string(int(month)+1)+"""01;
-                    python3 wao/freq_data_cleaner.py user_data/data/binance/BTC_USDT-5m.json;
-                    cd ../execution/;
-                    python3 month_data_download.py BTC """+self.get_month_string(int(month)-1)+""" """+str(year)+""";
-                    cd ../freqtrade;
-                    screen -L -Logfile Logfile-BTC-Strategy002-Backtest-12:41:00-April-16-2022.txt freqtrade backtesting -c """+strategy["config"]+""" -s """+strategy["strategy"]+""";
-                    """
-                    print(commands)
-                    os.system(commands)
-                    cumulative_profit = self.read_cumulative_profit_from_file()
-                    if(self.best_combination[2]<cumulative_profit):
-                        self.best_combination[0] = dup
-                        self.best_combination[1] = dup_max_counter
-                        self.best_combination[2] = cumulative_profit
+            # for dup in self.float_range(self.DUP_FLOOR,self.DUP_CEILING,self.DUP_STEP_FORWARD):
+            #     for dup_max_counter in self.float_range(self.MAX_COUNT_DUP_FLOOR,self.MAX_COUNT_DUP_CEILING,self.MAX_COUNT_DUP_STEP_FORWARD):
+            #         # Change the parameters in brain_config2022-04-12 16:30:48,856 - freqtrade - ERROR - Incorrect syntax for 2022-04-12 16:30:48,856 - freqtrade - ERROR - Incorrect syntax for timerange "2020101-2020201"timerange "2020101-2020201"
+            #         self.change_parameters_in_config(dup,dup_max_counter)
+            #         # download the data
+            print(time.time())
+            commands = """
+            freqtrade download-data --config """+strategy["config"]+""" -t 5m --timerange """+str(year)+self.get_month_string(int(month))+"""01-"""+str(year)+self.get_month_string(int(month)+1)+"""01;
+            python3 wao/freq_data_cleaner.py user_data/data/binance/BTC_USDT-5m.json;
+            cd ../execution/;
+            python3 month_data_download.py BTC """+self.get_month_string(int(month)-1)+""" """+str(year)+""";
+            cd ../freqtrade;
+            screen -L -Logfile Logfile-No-optimizer-BTC-Strategy002-Backtest-20:40:00-April-16-2022.txt freqtrade backtesting -c """+strategy["config"]+""" -s """+strategy["strategy"]+""";
+            """
+            print(commands)
+            os.system(commands)
+                    # cumulative_profit = self.read_cumulative_profit_from_file()
+                    # if(self.best_combination[2]<cumulative_profit):
+                    #     self.best_combination[0] = dup
+                    #     self.best_combination[1] = dup_max_counter
+                    #     self.best_combination[2] = cumulative_profit
 
                     # write the combinations to the list
-                    self.combinations.append([dup,dup_max_counter,cumulative_profit])
-            break
-            print("Best combination: ",self.best_combination)
-            self.write_to_csv(self.best_combination,"Best combination for coin: "+coin+" strategy: "+strategy["strategy"]+" month: "+str(month+1)+" year: "+str(year)+".csv")
-            # call to writing the test combinations to a csv file
-            self.write_to_csv(self.combinations,"Combinations for Coin: "+coin+" strategy: "+strategy["strategy"]+" month: "+str(month+1)+" year: "+str(year)+".csv")
+            #         self.combinations.append([dup,dup_max_counter,cumulative_profit])
+            # print("Best combination: ",self.best_combination)
+            # self.write_to_csv(self.best_combination,"Best combination for coin: "+coin+" strategy: "+strategy["strategy"]+" month: "+str(month+1)+" year: "+str(year)+".csv")
+            # # call to writing the test combinations to a csv file
+            # self.write_to_csv(self.combinations,"Combinations for Coin: "+coin+" strategy: "+strategy["strategy"]+" month: "+str(month+1)+" year: "+str(year)+".csv")
+
 
     def write_to_csv(self,array,filename):
         # write to csv using pandas
@@ -124,7 +124,7 @@ class Romeo_ai_optimizer:
         with open(self.cumulative_profit_path,'rt') as cumulative_profit:
             # get the cumulative profit from the file
             cumulative_profit = cumulative_profit.read()
-            return cumulative_profit
+            return float(cumulative_profit)
 
 
 if __name__=="__main__":
