@@ -1,0 +1,162 @@
+2022-04-16 11:43:01,508 - freqtrade.configuration.configuration - INFO - Using config: config2.json ...
+2022-04-16 11:43:01,533 - freqtrade.loggers - INFO - Verbosity set to 0
+2022-04-16 11:43:01,535 - freqtrade.configuration.configuration - INFO - Using max_open_trades: 3 ...
+2022-04-16 11:43:01,538 - freqtrade.configuration.configuration - INFO - Using user-data directory: /root/workspace2/freqtrade/user_data ...
+2022-04-16 11:43:01,544 - freqtrade.configuration.configuration - INFO - Using data directory: /root/workspace2/freqtrade/user_data/data/binance ...
+2022-04-16 11:43:01,545 - freqtrade.configuration.configuration - INFO - Parameter --cache=day detected ...
+2022-04-16 11:43:01,546 - freqtrade.configuration.check_exchange - INFO - Checking exchange...
+2022-04-16 11:43:01,598 - freqtrade.configuration.check_exchange - INFO - Exchange "binance" is officially supported by the Freqtrade development team.
+2022-04-16 11:43:01,604 - freqtrade.configuration.configuration - INFO - Using pairlist from configuration.
+2022-04-16 11:43:01,608 - freqtrade.configuration.config_validation - INFO - Validating configuration ...
+2022-04-16 11:43:01,621 - freqtrade.commands.optimize_commands - INFO - Starting freqtrade in Backtesting mode
+2022-04-16 11:43:01,626 - freqtrade.exchange.exchange - INFO - Instance is running with dry_run enabled
+2022-04-16 11:43:01,633 - freqtrade.exchange.exchange - INFO - Using CCXT 1.76.65
+2022-04-16 11:43:01,698 - freqtrade.exchange.exchange - INFO - Using Exchange "Binance"
+2022-04-16 11:43:03,983 - freqtrade.resolvers.exchange_resolver - INFO - Using resolved exchange 'Binance'...
+2022-04-16 11:43:05,825 - freqtrade.resolvers.iresolver - INFO - Using resolved strategy Strategy002 from '/root/workspace2/freqtrade/user_data/strategies/Strategy002.py'...
+2022-04-16 11:43:05,832 - freqtrade.strategy.hyper - INFO - Found no parameter file.
+2022-04-16 11:43:05,835 - freqtrade.strategy.hyper - INFO - No params for buy found, using default values.
+2022-04-16 11:43:05,837 - freqtrade.strategy.hyper - INFO - No params for sell found, using default values.
+2022-04-16 11:43:05,841 - freqtrade.strategy.hyper - INFO - No params for protection found, using default values.
+create_429_directory:.../root/workspace2/freqtrade/_429_directory/...
+perform_create_429_watcher: watching:- /root/workspace2/freqtrade/_429_directory/
+notifier: send_start_deliminator_message: 
+month------------------- Jan
+type of month----------- <class 'str'>
+year------------------- 2021
+type of year----------- <class 'int'>
+dup------------------- 0.1
+type of dup----------- <class 'float'>
+dup------------------- 1
+type of max_counter_dup----------- <class 'int'>
+post_request: ========Freq_Strategy002 DUP = 0.1 MAX_COUNTER_DUP = 1 BTC Jan 2021=======>
+<Response [200]>
+2022-04-16 11:43:05,983 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'stake_currency' with value in config file: USDT.
+2022-04-16 11:43:05,987 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'stake_amount' with value in config file: 50.
+2022-04-16 11:43:05,991 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'unfilledtimeout' with value in config file: {'buy': 10, 'sell': 30, 'unit': 'minutes', 'exit_timeout_count': 0}.
+2022-04-16 11:43:05,993 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using minimal_roi: {'60': 0.01, '30': 0.03, '20': 0.04, '0': 0.05}
+2022-04-16 11:43:05,995 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using timeframe: 5m
+2022-04-16 11:43:05,996 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using stoploss: -0.1
+2022-04-16 11:43:05,997 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using trailing_stop: False
+2022-04-16 11:43:05,998 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using trailing_stop_positive: 0.01
+2022-04-16 11:43:05,999 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using trailing_stop_positive_offset: 0.02
+2022-04-16 11:43:06,000 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using trailing_only_offset_is_reached: False
+2022-04-16 11:43:06,001 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using use_custom_stoploss: False
+2022-04-16 11:43:06,001 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using process_only_new_candles: False
+2022-04-16 11:43:06,002 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using order_types: {'buy': 'limit', 'sell': 'limit', 'stoploss': 'market', 'stoploss_on_exchange': False}
+2022-04-16 11:43:06,004 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using order_time_in_force: {'buy': 'gtc', 'sell': 'gtc'}
+2022-04-16 11:43:06,004 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using stake_currency: USDT
+2022-04-16 11:43:06,006 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using stake_amount: 50
+2022-04-16 11:43:06,007 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using protections: []
+2022-04-16 11:43:06,008 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using startup_candle_count: 0
+2022-04-16 11:43:06,009 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using unfilledtimeout: {'buy': 10, 'sell': 30, 'unit': 'minutes', 'exit_timeout_count': 0}
+2022-04-16 11:43:06,009 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using use_sell_signal: True
+2022-04-16 11:43:06,009 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using sell_profit_only: True
+2022-04-16 11:43:06,011 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using ignore_roi_if_buy_signal: False
+2022-04-16 11:43:06,011 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using sell_profit_offset: 0.0
+2022-04-16 11:43:06,012 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using disable_dataframe_checks: False
+2022-04-16 11:43:06,012 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using ignore_buying_expired_candle_after: 0
+2022-04-16 11:43:06,013 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using position_adjustment_enable: False
+2022-04-16 11:43:06,013 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using max_entry_position_adjustment: -1
+2022-04-16 11:43:06,014 - freqtrade.configuration.config_validation - INFO - Validating configuration ...
+2022-04-16 11:43:06,035 - freqtrade.resolvers.iresolver - INFO - Using resolved pairlist StaticPairList from '/root/workspace2/freqtrade/freqtrade/plugins/pairlist/StaticPairList.py'...
+2022-04-16 11:43:06,215 - freqtrade.optimize.backtesting - INFO - Loading data from 2021-01-01 00:00:00 up to 2021-01-31 22:50:00 (30 days).
+2022-04-16 11:43:06,221 - freqtrade.configuration.timerange - WARNING - Moving start-date by 0 candles to account for startup time.
+2022-04-16 11:43:06,225 - freqtrade.optimize.backtesting - INFO - Dataload complete. Calculating indicators
+2022-04-16 11:43:06,233 - freqtrade.optimize.backtesting - WARNING - Backtest result caching disabled due to use of open-ended timerange.
+2022-04-16 11:43:06,236 - freqtrade.optimize.backtesting - INFO - Running backtesting for Strategy Strategy002
+2022-04-16 11:43:06,265 - freqtrade.optimize.backtesting - INFO - Backtesting with data from 2021-01-01 00:00:00 up to 2021-01-31 22:50:00 (30 days).
+2022-04-16 11:43:06,395 - freqtrade.strategy.strategy_wrapper - ERROR - Unexpected error 'Strategy002' object has no attribute 'is_romeo_alive' calling <bound method WAOStrategy.confirm_trade_entry of <Strategy002.Strategy002 object at 0x7f4bcbaa9c10>>
+Traceback (most recent call last):
+  File "/root/workspace2/freqtrade/freqtrade/strategy/strategy_wrapper.py", line 21, in wrapper
+    return f(*args, **kwargs)
+  File "/root/workspace2/freqtrade/wao/wao_strategy.py", line 40, in confirm_trade_entry
+    is_same_coin_trade_open = self.is_romeo_alive(coin)
+AttributeError: 'Strategy002' object has no attribute 'is_romeo_alive'
+StrategyController: on_sell_signal: sell_reason=sell_signal, current_time=2021-01-20 15:05:00+00:00, coin=BTC, brain=Freq_Strategy002
+__get_unix_timestamp
+2022-04-16 11:43:06,464 - freqtrade.strategy.strategy_wrapper - ERROR - Unexpected error 'Strategy002' object has no attribute 'is_romeo_alive' calling <bound method WAOStrategy.confirm_trade_entry of <Strategy002.Strategy002 object at 0x7f4bcbaa9c10>>
+Traceback (most recent call last):
+  File "/root/workspace2/freqtrade/freqtrade/strategy/strategy_wrapper.py", line 21, in wrapper
+    return f(*args, **kwargs)
+  File "/root/workspace2/freqtrade/wao/wao_strategy.py", line 40, in confirm_trade_entry
+    is_same_coin_trade_open = self.is_romeo_alive(coin)
+AttributeError: 'Strategy002' object has no attribute 'is_romeo_alive'
+StrategyController: on_sell_signal: sell_reason=sell_signal, current_time=2021-01-27 11:00:00+00:00, coin=BTC, brain=Freq_Strategy002
+__get_unix_timestamp
+2022-04-16 11:43:06,521 - freqtrade.strategy.strategy_wrapper - ERROR - Unexpected error 'Strategy002' object has no attribute 'is_romeo_alive' calling <bound method WAOStrategy.confirm_trade_entry of <Strategy002.Strategy002 object at 0x7f4bcbaa9c10>>
+Traceback (most recent call last):
+  File "/root/workspace2/freqtrade/freqtrade/strategy/strategy_wrapper.py", line 21, in wrapper
+    return f(*args, **kwargs)
+  File "/root/workspace2/freqtrade/wao/wao_strategy.py", line 40, in confirm_trade_entry
+    is_same_coin_trade_open = self.is_romeo_alive(coin)
+AttributeError: 'Strategy002' object has no attribute 'is_romeo_alive'
+StrategyController: on_sell_signal: sell_reason=roi, current_time=2021-01-30 04:40:00+00:00, coin=BTC, brain=Freq_Strategy002
+__get_unix_timestamp
+2022-04-16 11:43:06,684 - freqtrade.misc - INFO - dumping json to "/root/workspace2/freqtrade/user_data/backtest_results/backtest-result-2022-04-16_11-43-06.meta.json"
+2022-04-16 11:43:06,690 - freqtrade.misc - INFO - dumping json to "/root/workspace2/freqtrade/user_data/backtest_results/backtest-result-2022-04-16_11-43-06.json"
+2022-04-16 11:43:06,694 - freqtrade.misc - INFO - dumping json to "/root/workspace2/freqtrade/user_data/backtest_results/.last_result.json"
+Result for strategy Strategy002
+========================================================== BACKTESTING REPORT =========================================================
+|     Pair |   Buys |   Avg Profit % |   Cum Profit % |   Tot Profit USDT |   Tot Profit % |   Avg Duration |   Win  Draw  Loss  Win% |
+|----------+--------+----------------+----------------+-------------------+----------------+----------------+-------------------------|
+| BTC/USDT |      3 |           0.40 |           1.21 |             0.605 |           0.06 |        2:48:00 |     3     0     0   100 |
+|    TOTAL |      3 |           0.40 |           1.21 |             0.605 |           0.06 |        2:48:00 |     3     0     0   100 |
+========================================================== BUY TAG STATS ===========================================================
+|   TAG |   Buys |   Avg Profit % |   Cum Profit % |   Tot Profit USDT |   Tot Profit % |   Avg Duration |   Win  Draw  Loss  Win% |
+|-------+--------+----------------+----------------+-------------------+----------------+----------------+-------------------------|
+| TOTAL |      3 |           0.40 |           1.21 |             0.605 |           0.06 |        2:48:00 |     3     0     0   100 |
+===================================================== SELL REASON STATS =====================================================
+|   Sell Reason |   Sells |   Win  Draws  Loss  Win% |   Avg Profit % |   Cum Profit % |   Tot Profit USDT |   Tot Profit % |
+|---------------+---------+--------------------------+----------------+----------------+-------------------+----------------|
+|   sell_signal |       2 |      2     0     0   100 |            0.1 |           0.21 |             0.105 |           0.21 |
+|           roi |       1 |      1     0     0   100 |            1   |           1    |             0.5   |           1    |
+====================================================== LEFT OPEN TRADES REPORT ======================================================
+|   Pair |   Buys |   Avg Profit % |   Cum Profit % |   Tot Profit USDT |   Tot Profit % |   Avg Duration |   Win  Draw  Loss  Win% |
+|--------+--------+----------------+----------------+-------------------+----------------+----------------+-------------------------|
+|  TOTAL |      0 |           0.00 |           0.00 |             0.000 |           0.00 |           0:00 |     0     0     0     0 |
+================== SUMMARY METRICS ===================
+| Metric                 | Value                     |
+|------------------------+---------------------------|
+| Backtesting from       | 2021-01-01 00:00:00       |
+| Backtesting to         | 2021-01-31 22:50:00       |
+| Max open trades        | 1                         |
+|                        |                           |
+| Total/Daily Avg Trades | 3 / 0.1                   |
+| Starting balance       | 1000 USDT                 |
+| Final balance          | 1000.605 USDT             |
+| Absolute profit        | 0.605 USDT                |
+| Total profit %         | 0.06%                     |
+| Trades per day         | 0.1                       |
+| Avg. daily profit %    | 0.00%                     |
+| Avg. stake amount      | 50 USDT                   |
+| Total trade volume     | 150 USDT                  |
+|                        |                           |
+| Best Pair              | BTC/USDT 1.21%            |
+| Worst Pair             | BTC/USDT 1.21%            |
+| Best trade             | BTC/USDT 1.00%            |
+| Worst trade            | BTC/USDT 0.01%            |
+| Best day               | 0.5 USDT                  |
+| Worst day              | 0 USDT                    |
+| Days win/draw/lose     | 3 / 8 / 0                 |
+| Avg. Duration Winners  | 2:48:00                   |
+| Avg. Duration Loser    | 0:00:00                   |
+| Rejected Buy signals   | 0                         |
+| Entry/Exit Timeouts    | 0 / 0                     |
+|                        |                           |
+| Min balance            | 0 USDT                    |
+| Max balance            | 0 USDT                    |
+| Drawdown (Account)     | 0.00%                     |
+| Drawdown               | 0 USDT                    |
+| Drawdown high          | 0 USDT                    |
+| Drawdown low           | 0 USDT                    |
+| Drawdown Start         | 1970-01-01 00:00:00+00:00 |
+| Drawdown End           | 1970-01-01 00:00:00+00:00 |
+| Market change          | 13.66%                    |
+======================================================
+
+^CException ignored in: <module 'threading' from '/usr/lib/python3.8/threading.py'>
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/threading.py", line 1388, in _shutdown
+    lock.acquire()
+KeyboardInterrupt: 

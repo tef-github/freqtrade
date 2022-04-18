@@ -14,8 +14,7 @@ class bbrsi_scalp(WAOStrategy):
     # This attribute will be overridden if the config file contains "minimal_roi"
 
     def __init__(self, config: dict):
-        super().__init__(config)
-        self.controller.setup(self.brain)
+        super().__init__(config, self.brain, 5)
 
     minimal_roi = {
         "0": 0.07
@@ -41,13 +40,6 @@ class bbrsi_scalp(WAOStrategy):
     sell_profit_only = True
     ignore_roi_if_buy_signal = False
 
-    # Optional order type mapping
-    order_types = {
-        'buy': 'limit',
-        'sell': 'limit',
-        'stoploss': 'market',
-        'stoploss_on_exchange': False
-    }
 
     def informative_pairs(self):
         """

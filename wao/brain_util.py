@@ -13,7 +13,7 @@ from config import Config
 from romeo import Romeo, RomeoExitPriceType
 
 
-def perform_execute_buy(coin, brain, romeo_pool):
+def perform_execute_buy(coin, brain, romeo_pool, time_out_hours):
     is_test_mode = False
     if BrainConfig.MODE == Config.MODE_TEST:
         is_test_mode = True
@@ -22,6 +22,7 @@ def perform_execute_buy(coin, brain, romeo_pool):
 
     Config.COIN = coin
     Config.BRAIN = brain
+    Config.ROMEO_SS_TIMEOUT_HOURS = time_out_hours
 
     romeo = Romeo.instance(is_test_mode, True)
     romeo_pool[coin] = romeo
@@ -29,20 +30,22 @@ def perform_execute_buy(coin, brain, romeo_pool):
 
 
 def perform_execute_sell(coin, romeo_pool):
-    if Config.ROMEO_IS_PT_FROM_BRAIN_SS_ENABLED:
+    if Config.IS_SS_ENABLED:
         romeo = romeo_pool.get(coin)
         if romeo is not None:
             romeo.perform_sell_signal(RomeoExitPriceType.SS)
 
 
 def perform_back_test_sell(date_time):
-    date = str(date_time).replace(" ", ", ")
-    Config.BACKTEST_SELL_SIGNAL_TIMESTAMP = __get_unix_timestamp(date.split("+", 1)[0])
+    if Config.IS_SS_ENABLED:
+        date = str(date_time).replace(" ", ", ")
+        Config.BACKTEST_SELL_SIGNAL_TIMESTAMP = __get_unix_timestamp(date.split("+", 1)[0])
 
 
-def perform_back_test_buy(date_time, coin, brain, romeo_pool):
+def perform_back_test_buy(date_time, coin, brain, romeo_pool, time_out_hours):
     Config.COIN = coin
     Config.BRAIN = brain
+    Config.ROMEO_SS_TIMEOUT_HOURS = time_out_hours
     Config.ROMEO_D_UP_PERCENTAGE = float(BrainConfig.BACKTEST_DUP)
     Config.ROMEO_D_UP_MAX = int(BrainConfig.BACKTEST_MAX_COUNT_DUP)
     date = str(date_time).replace(" ", ", ")

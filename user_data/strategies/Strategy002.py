@@ -13,8 +13,7 @@ class Strategy002(WAOStrategy):
     brain = 'Freq_Strategy002'
 
     def __init__(self, config: dict):
-        super().__init__(config)
-        self.controller.setup(self.brain)
+        super().__init__(config, self.brain, 10)
 
     """
     Strategy 002
@@ -53,14 +52,6 @@ class Strategy002(WAOStrategy):
     use_sell_signal = True
     sell_profit_only = True
     ignore_roi_if_buy_signal = False
-
-    # Optional order type mapping
-    order_types = {
-        'buy': 'limit',
-        'sell': 'limit',
-        'stoploss': 'market',
-        'stoploss_on_exchange': False
-    }
 
 
     def informative_pairs(self):

@@ -1,0 +1,2385 @@
+2022-04-16 21:12:12,644 - freqtrade.configuration.configuration - INFO - Using config: config2.json ...
+2022-04-16 21:12:12,653 - freqtrade.loggers - INFO - Verbosity set to 0
+2022-04-16 21:12:12,656 - freqtrade.configuration.configuration - INFO - Using max_open_trades: 1 ...
+2022-04-16 21:12:12,660 - freqtrade.configuration.configuration - INFO - Using user-data directory: /root/workspace2/freqtrade/user_data ...
+2022-04-16 21:12:12,666 - freqtrade.configuration.configuration - INFO - Using data directory: /root/workspace2/freqtrade/user_data/data/binance ...
+2022-04-16 21:12:12,668 - freqtrade.configuration.configuration - INFO - Parameter --cache=day detected ...
+2022-04-16 21:12:12,669 - freqtrade.configuration.check_exchange - INFO - Checking exchange...
+2022-04-16 21:12:12,703 - freqtrade.configuration.check_exchange - INFO - Exchange "binance" is officially supported by the Freqtrade development team.
+2022-04-16 21:12:12,706 - freqtrade.configuration.configuration - INFO - Using pairlist from configuration.
+2022-04-16 21:12:12,709 - freqtrade.configuration.config_validation - INFO - Validating configuration ...
+2022-04-16 21:12:12,718 - freqtrade.commands.optimize_commands - INFO - Starting freqtrade in Backtesting mode
+2022-04-16 21:12:12,732 - freqtrade.exchange.exchange - INFO - Instance is running with dry_run enabled
+2022-04-16 21:12:12,734 - freqtrade.exchange.exchange - INFO - Using CCXT 1.76.65
+2022-04-16 21:12:12,789 - freqtrade.exchange.exchange - INFO - Using Exchange "Binance"
+2022-04-16 21:12:15,467 - freqtrade.resolvers.exchange_resolver - INFO - Using resolved exchange 'Binance'...
+2022-04-16 21:12:16,979 - freqtrade.resolvers.iresolver - INFO - Using resolved strategy Strategy002 from '/root/workspace2/freqtrade/user_data/strategies/Strategy002.py'...
+2022-04-16 21:12:16,980 - freqtrade.strategy.hyper - INFO - Found no parameter file.
+2022-04-16 21:12:16,981 - freqtrade.strategy.hyper - INFO - No params for buy found, using default values.
+2022-04-16 21:12:16,982 - freqtrade.strategy.hyper - INFO - No params for sell found, using default values.
+2022-04-16 21:12:16,982 - freqtrade.strategy.hyper - INFO - No params for protection found, using default values.
+notifier: send_start_deliminator_message: 
+month------------------- Jan
+type of month----------- <class 'str'>
+year------------------- 2021
+type of year----------- <class 'int'>
+dup------------------- 0.30000000000000004
+type of dup----------- <class 'float'>
+dup------------------- 2
+type of max_counter_dup----------- <class 'int'>
+post_request: ========Freq_Strategy002 DUP = 0.30000000000000004 MAX_COUNTER_DUP = 2 BTC Jan 2021=======>
+<Response [200]>
+2022-04-16 21:12:17,216 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'stake_currency' with value in config file: USDT.
+2022-04-16 21:12:17,220 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'stake_amount' with value in config file: 50.
+2022-04-16 21:12:17,223 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'unfilledtimeout' with value in config file: {'buy': 10, 'sell': 30, 'unit': 'minutes', 'exit_timeout_count': 0}.
+2022-04-16 21:12:17,225 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using minimal_roi: {'60': 0.01, '30': 0.03, '20': 0.04, '0': 0.05}
+2022-04-16 21:12:17,226 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using timeframe: 5m
+2022-04-16 21:12:17,227 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using stoploss: -0.1
+2022-04-16 21:12:17,229 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using trailing_stop: False
+2022-04-16 21:12:17,230 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using trailing_stop_positive: 0.01
+2022-04-16 21:12:17,231 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using trailing_stop_positive_offset: 0.02
+2022-04-16 21:12:17,232 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using trailing_only_offset_is_reached: False
+2022-04-16 21:12:17,233 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using use_custom_stoploss: False
+2022-04-16 21:12:17,234 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using process_only_new_candles: False
+2022-04-16 21:12:17,234 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using order_types: {'buy': 'limit', 'sell': 'limit', 'stoploss': 'market', 'stoploss_on_exchange': False}
+2022-04-16 21:12:17,235 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using order_time_in_force: {'buy': 'gtc', 'sell': 'gtc'}
+2022-04-16 21:12:17,237 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using stake_currency: USDT
+2022-04-16 21:12:17,237 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using stake_amount: 50
+2022-04-16 21:12:17,238 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using protections: []
+2022-04-16 21:12:17,238 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using startup_candle_count: 0
+2022-04-16 21:12:17,239 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using unfilledtimeout: {'buy': 10, 'sell': 30, 'unit': 'minutes', 'exit_timeout_count': 0}
+2022-04-16 21:12:17,240 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using use_sell_signal: True
+2022-04-16 21:12:17,240 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using sell_profit_only: True
+2022-04-16 21:12:17,241 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using ignore_roi_if_buy_signal: False
+2022-04-16 21:12:17,242 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using sell_profit_offset: 0.0
+2022-04-16 21:12:17,243 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using disable_dataframe_checks: False
+2022-04-16 21:12:17,244 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using ignore_buying_expired_candle_after: 0
+2022-04-16 21:12:17,244 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using position_adjustment_enable: False
+2022-04-16 21:12:17,245 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using max_entry_position_adjustment: -1
+2022-04-16 21:12:17,245 - freqtrade.configuration.config_validation - INFO - Validating configuration ...
+2022-04-16 21:12:17,263 - freqtrade.resolvers.iresolver - INFO - Using resolved pairlist StaticPairList from '/root/workspace2/freqtrade/freqtrade/plugins/pairlist/StaticPairList.py'...
+2022-04-16 21:12:17,389 - freqtrade.optimize.backtesting - INFO - Loading data from 2021-01-01 00:00:00 up to 2021-01-31 22:50:00 (30 days).
+2022-04-16 21:12:17,394 - freqtrade.configuration.timerange - WARNING - Moving start-date by 0 candles to account for startup time.
+2022-04-16 21:12:17,396 - freqtrade.optimize.backtesting - INFO - Dataload complete. Calculating indicators
+2022-04-16 21:12:17,400 - freqtrade.optimize.backtesting - WARNING - Backtest result caching disabled due to use of open-ended timerange.
+2022-04-16 21:12:17,403 - freqtrade.optimize.backtesting - INFO - Running backtesting for Strategy Strategy002
+2022-04-16 21:12:17,427 - freqtrade.optimize.backtesting - INFO - Backtesting with data from 2021-01-01 00:00:00 up to 2021-01-31 22:50:00 (30 days).
+StrategyController: on_buy_signal: current_time=2021-01-20 09:45:00+00:00, coin=BTC, brain=Freq_Strategy002
+__get_unix_timestamp
+__get_month_from_timestamp
+__get_year_from_timestamp
+_perform_back_test: Config.BACKTEST_BUY_SIGNAL_TIMESTAMP = 1611132300 Config.BACKTEST_MONTH_INDEX = 0 Config.COIN = BTC Config.BRAIN = Freq_Strategy002 Config.ROMEO_D_UP_PERCENTAGE = 0.30000000000000004 Config.ROMEO_D_UP_MAX = 2
+Romeo: new instance ============ system.version=1.56
+Romeo: START 
+Shell_Broker get_account_balance_usdt 
+Notifier: send_romeo_message: action=ROMEO_START: OL,OS
+post_request: *Action: **ROMEO_START: OL,OS*
+*Machine: *14303.example.com
+*Version: *1.56
+*Execution ID: *J-1650136338595771752-1
+*Brain: *Freq Strategy002
+*Test mode: *True
+*Coin amount: *0.0 BTC
+*USD amount: *11 USD
+*Entry price: *None USD
+*D_UP: *0.30000000000000004
+*D_UP_MAX: *2
+*D_UP crossed counter: *0
+*Duration: *None
+*Profit: *None
+*ExitPriceType: *None
+StrategyController: on_sell_signal: sell_reason=sell_signal, current_time=2021-01-20 15:05:00+00:00, coin=BTC, brain=Freq_Strategy002
+__get_unix_timestamp
+StrategyController: on_buy_signal: current_time=2021-01-27 08:55:00+00:00, coin=BTC, brain=Freq_Strategy002
+<Response [200]>
+Shell_Broker open_long 
+Shell_Broker open_short 
+Back_Test_Market_Data_Worker_Thread: progress=0.0 %
+Romeo: _perform_romeo: price=35512.65 entry_price=35512.65 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=None current_state=None
+Back_Test_Market_Data_Worker_Thread: progress=0.0 %
+Romeo: _perform_romeo: price=35545.31 entry_price=35512.65 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=None current_state=RomeoState.ABOVE_ENTRY_BELOW_D_UP
+Back_Test_Market_Data_Worker_Thread: progress=0.01 %
+Romeo: _perform_romeo: price=35599.99 entry_price=35512.65 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.ABOVE_ENTRY_BELOW_D_UP current_state=RomeoState.ABOVE_ENTRY_BELOW_D_UP
+Back_Test_Market_Data_Worker_Thread: progress=0.01 %
+Romeo: _perform_romeo: price=35619.56 entry_price=35512.65 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.ABOVE_ENTRY_BELOW_D_UP current_state=RomeoState.ABOVE_D_UP_BELOW_PT
+Notifier: send_romeo_message: action=ROMEO: UPWARDS: Price Crossing D_UP: CS (LOSS))
+post_request: *Action: **ROMEO: UPWARDS: Price Crossing D_UP: CS (LOSS))*
+*Machine: *14303.example.com
+*Version: *1.56
+*Execution ID: *J-1650136338595771752-2
+*Brain: *Freq Strategy002
+*Test mode: *True
+*Coin amount: *0.0 BTC
+*USD amount: *11 USD
+*Entry price: *35512.65 USD
+*D_UP: *0.30000000000000004
+*D_UP_MAX: *2
+*D_UP crossed counter: *1
+*Duration: *None
+*Profit: *None
+*ExitPriceType: *None
+<Response [200]>
+Shell_Broker close_short 
+Back_Test_Market_Data_Worker_Thread: progress=0.01 %
+Romeo: _perform_romeo: price=35529.3 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.ABOVE_D_UP_BELOW_PT current_state=RomeoState.ABOVE_ENTRY_BELOW_D_UP
+Back_Test_Market_Data_Worker_Thread: progress=0.01 %
+Romeo: _perform_romeo: price=35546.3 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.ABOVE_ENTRY_BELOW_D_UP current_state=RomeoState.ABOVE_ENTRY_BELOW_D_UP
+Back_Test_Market_Data_Worker_Thread: progress=0.02 %
+Romeo: _perform_romeo: price=35505.49 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.ABOVE_ENTRY_BELOW_D_UP current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Notifier: send_romeo_message: action=ROMEO: DOWNWARDS: Price Crossing ENTRY_PRICE: OS (NEUTRAL)
+post_request: *Action: **ROMEO: DOWNWARDS: Price Crossing ENTRY_PRICE: OS (NEUTRAL)*
+*Machine: *14303.example.com
+*Version: *1.56
+*Execution ID: *J-1650136338595771752-3
+*Brain: *Freq Strategy002
+*Test mode: *True
+*Coin amount: *0.0 BTC
+*USD amount: *11 USD
+*Entry price: *35512.65 USD
+*D_UP: *0.30000000000000004
+*D_UP_MAX: *2
+*D_UP crossed counter: *1
+*Duration: *None
+*Profit: *None
+*ExitPriceType: *None
+<Response [200]>
+Shell_Broker open_short 
+Back_Test_Market_Data_Worker_Thread: progress=0.02 %
+Romeo: _perform_romeo: price=35517.75 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.ABOVE_ENTRY_BELOW_D_UP
+Back_Test_Market_Data_Worker_Thread: progress=0.02 %
+Romeo: _perform_romeo: price=35527.63 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.ABOVE_ENTRY_BELOW_D_UP current_state=RomeoState.ABOVE_ENTRY_BELOW_D_UP
+Back_Test_Market_Data_Worker_Thread: progress=0.02 %
+Romeo: _perform_romeo: price=35528.62 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.ABOVE_ENTRY_BELOW_D_UP current_state=RomeoState.ABOVE_ENTRY_BELOW_D_UP
+Back_Test_Market_Data_Worker_Thread: progress=0.02 %
+Romeo: _perform_romeo: price=35571.58 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.ABOVE_ENTRY_BELOW_D_UP current_state=RomeoState.ABOVE_ENTRY_BELOW_D_UP
+Back_Test_Market_Data_Worker_Thread: progress=0.03 %
+Romeo: _perform_romeo: price=35519.02 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.ABOVE_ENTRY_BELOW_D_UP current_state=RomeoState.ABOVE_ENTRY_BELOW_D_UP
+Back_Test_Market_Data_Worker_Thread: progress=0.03 %
+Romeo: _perform_romeo: price=35486.65 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.ABOVE_ENTRY_BELOW_D_UP current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.03 %
+Romeo: _perform_romeo: price=35461.09 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.03 %
+Romeo: _perform_romeo: price=35475.45 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.04 %
+Romeo: _perform_romeo: price=35397.68 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.04 %
+Romeo: _perform_romeo: price=35311.89 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.04 %
+Romeo: _perform_romeo: price=35371.13 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.04 %
+Romeo: _perform_romeo: price=35371.47 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.04 %
+Romeo: _perform_romeo: price=35298.94 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.05 %
+Romeo: _perform_romeo: price=35275.1 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.05 %
+Romeo: _perform_romeo: price=35287.42 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.05 %
+Romeo: _perform_romeo: price=35341.35 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.05 %
+Romeo: _perform_romeo: price=35364.97 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.06 %
+Romeo: _perform_romeo: price=35369.33 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.06 %
+Romeo: _perform_romeo: price=35358.15 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.06 %
+Romeo: _perform_romeo: price=35348.97 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.06 %
+Romeo: _perform_romeo: price=35400.39 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.06 %
+Romeo: _perform_romeo: price=35433.31 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.07 %
+Romeo: _perform_romeo: price=35304.17 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.07 %
+Romeo: _perform_romeo: price=35387.08 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.07 %
+Romeo: _perform_romeo: price=35380.49 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.07 %
+Romeo: _perform_romeo: price=35441.99 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.08 %
+Romeo: _perform_romeo: price=35412.18 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.08 %
+Romeo: _perform_romeo: price=35456.84 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.08 %
+Romeo: _perform_romeo: price=35423.96 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.08 %
+Romeo: _perform_romeo: price=35410.3 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.09 %
+Romeo: _perform_romeo: price=35432.64 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.09 %
+Romeo: _perform_romeo: price=35371.87 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.09 %
+Romeo: _perform_romeo: price=35456.71 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.09 %
+Romeo: _perform_romeo: price=35384.25 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.09 %
+Romeo: _perform_romeo: price=35404.36 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.1 %
+Romeo: _perform_romeo: price=35399.99 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.1 %
+Romeo: _perform_romeo: price=35395.37 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.1 %
+Romeo: _perform_romeo: price=35302.21 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.1 %
+Romeo: _perform_romeo: price=35274.4 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.11 %
+Romeo: _perform_romeo: price=35186.79 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.11 %
+Romeo: _perform_romeo: price=35211.53 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.11 %
+Romeo: _perform_romeo: price=35255.32 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.11 %
+Romeo: _perform_romeo: price=35166.38 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.11 %
+Romeo: _perform_romeo: price=35125.43 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.12 %
+Romeo: _perform_romeo: price=35046.06 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.12 %
+Romeo: _perform_romeo: price=35090.97 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.12 %
+Romeo: _perform_romeo: price=35030.51 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.12 %
+Romeo: _perform_romeo: price=34890.82 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.13 %
+Romeo: _perform_romeo: price=34679.82 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.13 %
+Romeo: _perform_romeo: price=34776.1 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.13 %
+Romeo: _perform_romeo: price=34819.95 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.13 %
+Romeo: _perform_romeo: price=34866.63 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.13 %
+Romeo: _perform_romeo: price=34843.77 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.14 %
+Romeo: _perform_romeo: price=34793.69 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.14 %
+Romeo: _perform_romeo: price=34595.0 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.14 %
+Romeo: _perform_romeo: price=34665.63 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.14 %
+Romeo: _perform_romeo: price=34759.99 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.15 %
+Romeo: _perform_romeo: price=34906.51 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.15 %
+Romeo: _perform_romeo: price=34858.03 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.15 %
+Romeo: _perform_romeo: price=34866.61 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.15 %
+Romeo: _perform_romeo: price=34902.22 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.15 %
+Romeo: _perform_romeo: price=34852.75 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.16 %
+Romeo: _perform_romeo: price=34797.55 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.16 %
+Romeo: _perform_romeo: price=34767.84 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.16 %
+Romeo: _perform_romeo: price=34734.41 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.16 %
+Romeo: _perform_romeo: price=34717.27 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.17 %
+Romeo: _perform_romeo: price=34756.47 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.17 %
+Romeo: _perform_romeo: price=34801.83 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.17 %
+Romeo: _perform_romeo: price=34650.68 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.17 %
+Romeo: _perform_romeo: price=34620.31 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.17 %
+Romeo: _perform_romeo: price=34630.64 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.18 %
+Romeo: _perform_romeo: price=34753.04 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.18 %
+Romeo: _perform_romeo: price=34586.6 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.18 %
+Romeo: _perform_romeo: price=34399.08 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.18 %
+Romeo: _perform_romeo: price=34468.16 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.19 %
+Romeo: _perform_romeo: price=34372.24 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.19 %
+Romeo: _perform_romeo: price=34420.28 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.19 %
+Romeo: _perform_romeo: price=34540.71 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.19 %
+Romeo: _perform_romeo: price=34605.99 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.19 %
+Romeo: _perform_romeo: price=34500.0 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.2 %
+Romeo: _perform_romeo: price=34520.31 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.2 %
+Romeo: _perform_romeo: price=34585.15 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.2 %
+Romeo: _perform_romeo: price=34706.49 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.2 %
+Romeo: _perform_romeo: price=34786.07 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.21 %
+Romeo: _perform_romeo: price=34764.23 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.21 %
+Romeo: _perform_romeo: price=34804.19 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.21 %
+Romeo: _perform_romeo: price=34820.42 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.21 %
+Romeo: _perform_romeo: price=34779.11 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.22 %
+Romeo: _perform_romeo: price=34752.47 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.22 %
+Romeo: _perform_romeo: price=34669.25 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.22 %
+Romeo: _perform_romeo: price=34750.0 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.22 %
+Romeo: _perform_romeo: price=34862.89 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.22 %
+Romeo: _perform_romeo: price=34874.12 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.23 %
+Romeo: _perform_romeo: price=34801.44 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.23 %
+Romeo: _perform_romeo: price=34800.53 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.23 %
+Romeo: _perform_romeo: price=34700.71 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.23 %
+Romeo: _perform_romeo: price=34833.1 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.24 %
+Romeo: _perform_romeo: price=34762.97 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.24 %
+Romeo: _perform_romeo: price=34699.05 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.24 %
+Romeo: _perform_romeo: price=34678.03 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.24 %
+Romeo: _perform_romeo: price=34674.93 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.24 %
+Romeo: _perform_romeo: price=34640.0 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.25 %
+Romeo: _perform_romeo: price=34628.28 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.25 %
+Romeo: _perform_romeo: price=34735.5 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.25 %
+Romeo: _perform_romeo: price=34783.12 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.25 %
+Romeo: _perform_romeo: price=34827.39 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.26 %
+Romeo: _perform_romeo: price=34775.02 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.26 %
+Romeo: _perform_romeo: price=34724.31 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.26 %
+Romeo: _perform_romeo: price=34772.8 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.26 %
+Romeo: _perform_romeo: price=34796.62 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.26 %
+Romeo: _perform_romeo: price=34866.61 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.27 %
+Romeo: _perform_romeo: price=34874.07 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.27 %
+Romeo: _perform_romeo: price=34825.74 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.27 %
+Romeo: _perform_romeo: price=34801.54 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.27 %
+Romeo: _perform_romeo: price=34821.93 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.28 %
+Romeo: _perform_romeo: price=34884.23 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.28 %
+Romeo: _perform_romeo: price=34964.82 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.28 %
+Romeo: _perform_romeo: price=34907.11 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.28 %
+Romeo: _perform_romeo: price=34874.25 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.28 %
+Romeo: _perform_romeo: price=34862.58 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.29 %
+Romeo: _perform_romeo: price=34865.19 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.29 %
+Romeo: _perform_romeo: price=34898.8 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.29 %
+Romeo: _perform_romeo: price=34860.91 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.29 %
+Romeo: _perform_romeo: price=34828.08 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.3 %
+Romeo: _perform_romeo: price=34839.99 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.3 %
+Romeo: _perform_romeo: price=34829.39 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.3 %
+Romeo: _perform_romeo: price=34775.1 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.3 %
+Romeo: _perform_romeo: price=34721.51 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.3 %
+Romeo: _perform_romeo: price=34720.29 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.31 %
+Romeo: _perform_romeo: price=34811.43 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.31 %
+Romeo: _perform_romeo: price=34791.47 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.31 %
+Romeo: _perform_romeo: price=34823.9 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.31 %
+Romeo: _perform_romeo: price=34784.95 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.32 %
+Romeo: _perform_romeo: price=34764.95 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.32 %
+Romeo: _perform_romeo: price=34807.01 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.32 %
+Romeo: _perform_romeo: price=34831.97 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.32 %
+Romeo: _perform_romeo: price=34730.71 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.32 %
+Romeo: _perform_romeo: price=34615.49 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.33 %
+Romeo: _perform_romeo: price=34557.53 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.33 %
+Romeo: _perform_romeo: price=34568.91 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.33 %
+Romeo: _perform_romeo: price=34541.62 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.33 %
+Romeo: _perform_romeo: price=34545.32 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.34 %
+Romeo: _perform_romeo: price=34438.39 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.34 %
+Romeo: _perform_romeo: price=34429.43 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.34 %
+Romeo: _perform_romeo: price=34240.26 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.34 %
+Romeo: _perform_romeo: price=34270.34 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.34 %
+Romeo: _perform_romeo: price=34132.85 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.35 %
+Romeo: _perform_romeo: price=34139.1 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.35 %
+Romeo: _perform_romeo: price=34225.98 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.35 %
+Romeo: _perform_romeo: price=34173.02 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.35 %
+Romeo: _perform_romeo: price=34059.01 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.36 %
+Romeo: _perform_romeo: price=34093.15 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.36 %
+Romeo: _perform_romeo: price=34225.53 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.36 %
+Romeo: _perform_romeo: price=34287.0 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.36 %
+Romeo: _perform_romeo: price=34224.57 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.37 %
+Romeo: _perform_romeo: price=34237.5 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.37 %
+Romeo: _perform_romeo: price=34150.0 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.37 %
+Romeo: _perform_romeo: price=34196.04 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.37 %
+Romeo: _perform_romeo: price=34352.5 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.37 %
+Romeo: _perform_romeo: price=34358.3 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.38 %
+Romeo: _perform_romeo: price=34404.87 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.38 %
+Romeo: _perform_romeo: price=34369.31 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.38 %
+Romeo: _perform_romeo: price=34454.58 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.38 %
+Romeo: _perform_romeo: price=34434.19 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.39 %
+Romeo: _perform_romeo: price=34435.7 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.39 %
+Romeo: _perform_romeo: price=34534.52 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.39 %
+Romeo: _perform_romeo: price=34518.44 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.39 %
+Romeo: _perform_romeo: price=34506.93 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.39 %
+Romeo: _perform_romeo: price=34445.47 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.4 %
+Romeo: _perform_romeo: price=34477.85 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.4 %
+Romeo: _perform_romeo: price=34523.05 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.4 %
+Romeo: _perform_romeo: price=34486.75 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.4 %
+Romeo: _perform_romeo: price=34516.81 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.41 %
+Romeo: _perform_romeo: price=34454.71 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.41 %
+Romeo: _perform_romeo: price=34455.72 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.41 %
+Romeo: _perform_romeo: price=34462.76 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.41 %
+Romeo: _perform_romeo: price=34477.97 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.41 %
+Romeo: _perform_romeo: price=34468.44 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.42 %
+Romeo: _perform_romeo: price=34422.08 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.42 %
+Romeo: _perform_romeo: price=34364.71 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.42 %
+Romeo: _perform_romeo: price=34390.41 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.42 %
+Romeo: _perform_romeo: price=34589.18 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.43 %
+Romeo: _perform_romeo: price=34561.0 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.43 %
+Romeo: _perform_romeo: price=34582.87 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.43 %
+Romeo: _perform_romeo: price=34483.03 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.43 %
+Romeo: _perform_romeo: price=34446.21 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.43 %
+Romeo: _perform_romeo: price=34430.89 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.44 %
+Romeo: _perform_romeo: price=34426.17 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.44 %
+Romeo: _perform_romeo: price=34326.34 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.44 %
+Romeo: _perform_romeo: price=34237.17 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.44 %
+Romeo: _perform_romeo: price=34213.76 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.45 %
+Romeo: _perform_romeo: price=34053.59 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.45 %
+Romeo: _perform_romeo: price=34144.55 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.45 %
+Romeo: _perform_romeo: price=34088.35 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.45 %
+Romeo: _perform_romeo: price=34189.36 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.45 %
+Romeo: _perform_romeo: price=34404.67 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.46 %
+Romeo: _perform_romeo: price=34494.86 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.46 %
+Romeo: _perform_romeo: price=34616.5 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.46 %
+Romeo: _perform_romeo: price=34637.61 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.46 %
+Romeo: _perform_romeo: price=34579.33 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.47 %
+Romeo: _perform_romeo: price=34539.12 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.47 %
+Romeo: _perform_romeo: price=34441.44 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.47 %
+Romeo: _perform_romeo: price=34517.85 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.47 %
+Romeo: _perform_romeo: price=34582.38 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.47 %
+Romeo: _perform_romeo: price=34653.0 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.48 %
+Romeo: _perform_romeo: price=34607.44 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.48 %
+Romeo: _perform_romeo: price=34516.88 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.48 %
+Romeo: _perform_romeo: price=34477.43 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.48 %
+Romeo: _perform_romeo: price=34582.68 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.49 %
+Romeo: _perform_romeo: price=34599.61 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.49 %
+Romeo: _perform_romeo: price=34528.21 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.49 %
+Romeo: _perform_romeo: price=34544.77 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.49 %
+Romeo: _perform_romeo: price=34642.96 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.5 %
+Romeo: _perform_romeo: price=34692.94 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.5 %
+Romeo: _perform_romeo: price=34669.23 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.5 %
+Romeo: _perform_romeo: price=34647.99 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.5 %
+Romeo: _perform_romeo: price=34654.23 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.5 %
+Romeo: _perform_romeo: price=34722.17 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.51 %
+Romeo: _perform_romeo: price=34717.41 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.51 %
+Romeo: _perform_romeo: price=34677.95 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.51 %
+Romeo: _perform_romeo: price=34705.44 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.51 %
+Romeo: _perform_romeo: price=34792.01 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.52 %
+Romeo: _perform_romeo: price=34719.65 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.52 %
+Romeo: _perform_romeo: price=34738.15 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.52 %
+Romeo: _perform_romeo: price=34664.47 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.52 %
+Romeo: _perform_romeo: price=34582.02 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.52 %
+Romeo: _perform_romeo: price=34658.08 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.53 %
+Romeo: _perform_romeo: price=34631.06 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.53 %
+Romeo: _perform_romeo: price=34570.79 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.53 %
+Romeo: _perform_romeo: price=34575.46 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.53 %
+Romeo: _perform_romeo: price=34654.36 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.54 %
+Romeo: _perform_romeo: price=34638.48 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.54 %
+Romeo: _perform_romeo: price=34620.85 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.54 %
+Romeo: _perform_romeo: price=34653.17 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.54 %
+Romeo: _perform_romeo: price=34615.63 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.54 %
+Romeo: _perform_romeo: price=34533.82 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.55 %
+Romeo: _perform_romeo: price=34511.13 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.55 %
+Romeo: _perform_romeo: price=34503.6 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.55 %
+Romeo: _perform_romeo: price=34581.27 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.55 %
+Romeo: _perform_romeo: price=34611.63 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.56 %
+Romeo: _perform_romeo: price=34667.71 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.56 %
+Romeo: _perform_romeo: price=34681.13 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.56 %
+Romeo: _perform_romeo: price=34669.21 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.56 %
+Romeo: _perform_romeo: price=34623.86 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.56 %
+Romeo: _perform_romeo: price=34604.4 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.57 %
+Romeo: _perform_romeo: price=34615.63 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.57 %
+Romeo: _perform_romeo: price=34688.24 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.57 %
+Romeo: _perform_romeo: price=34717.66 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.57 %
+Romeo: _perform_romeo: price=34680.44 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.58 %
+Romeo: _perform_romeo: price=34683.87 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.58 %
+Romeo: _perform_romeo: price=34605.91 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.58 %
+Romeo: _perform_romeo: price=34626.44 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.58 %
+Romeo: _perform_romeo: price=34602.76 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.58 %
+Romeo: _perform_romeo: price=34550.94 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.59 %
+Romeo: _perform_romeo: price=34564.89 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.59 %
+Romeo: _perform_romeo: price=34544.5 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.59 %
+Romeo: _perform_romeo: price=34471.89 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.59 %
+Romeo: _perform_romeo: price=34343.45 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.6 %
+Romeo: _perform_romeo: price=34434.72 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.6 %
+Romeo: _perform_romeo: price=34417.9 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.6 %
+Romeo: _perform_romeo: price=34471.11 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.6 %
+Romeo: _perform_romeo: price=34444.6 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.6 %
+Romeo: _perform_romeo: price=34404.87 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.61 %
+Romeo: _perform_romeo: price=34372.83 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.61 %
+Romeo: _perform_romeo: price=34576.29 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.61 %
+Romeo: _perform_romeo: price=34492.68 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.61 %
+Romeo: _perform_romeo: price=34476.35 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.62 %
+Romeo: _perform_romeo: price=34436.92 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.62 %
+Romeo: _perform_romeo: price=34317.8 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.62 %
+Romeo: _perform_romeo: price=34269.3 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.62 %
+Romeo: _perform_romeo: price=34331.14 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.62 %
+Romeo: _perform_romeo: price=34375.08 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.63 %
+Romeo: _perform_romeo: price=34365.77 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.63 %
+Romeo: _perform_romeo: price=34434.63 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.63 %
+Romeo: _perform_romeo: price=34365.8 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.63 %
+Romeo: _perform_romeo: price=34437.97 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.64 %
+Romeo: _perform_romeo: price=34432.88 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.64 %
+Romeo: _perform_romeo: price=34464.92 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.64 %
+Romeo: _perform_romeo: price=34561.27 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.64 %
+Romeo: _perform_romeo: price=34537.54 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.65 %
+Romeo: _perform_romeo: price=34528.52 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.65 %
+Romeo: _perform_romeo: price=34482.02 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.65 %
+Romeo: _perform_romeo: price=34576.15 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.65 %
+Romeo: _perform_romeo: price=34452.67 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.65 %
+Romeo: _perform_romeo: price=34500.0 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.66 %
+Romeo: _perform_romeo: price=34564.98 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.66 %
+Romeo: _perform_romeo: price=34539.16 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.66 %
+Romeo: _perform_romeo: price=34708.3 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.66 %
+Romeo: _perform_romeo: price=34754.94 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.67 %
+Romeo: _perform_romeo: price=34719.86 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.67 %
+Romeo: _perform_romeo: price=34733.15 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.67 %
+Romeo: _perform_romeo: price=34766.04 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.67 %
+Romeo: _perform_romeo: price=34755.43 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.67 %
+Romeo: _perform_romeo: price=34835.35 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.68 %
+Romeo: _perform_romeo: price=34892.13 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.68 %
+Romeo: _perform_romeo: price=34960.72 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.68 %
+Romeo: _perform_romeo: price=34927.09 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.68 %
+Romeo: _perform_romeo: price=34901.75 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.69 %
+Romeo: _perform_romeo: price=34924.36 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.69 %
+Romeo: _perform_romeo: price=34929.25 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.69 %
+Romeo: _perform_romeo: price=34898.49 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.69 %
+Romeo: _perform_romeo: price=34895.13 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.69 %
+Romeo: _perform_romeo: price=34879.62 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.7 %
+Romeo: _perform_romeo: price=34883.38 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.7 %
+Romeo: _perform_romeo: price=34861.04 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.7 %
+Romeo: _perform_romeo: price=34870.33 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.7 %
+Romeo: _perform_romeo: price=34926.18 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.71 %
+Romeo: _perform_romeo: price=34958.56 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.71 %
+Romeo: _perform_romeo: price=34989.31 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.71 %
+Romeo: _perform_romeo: price=35080.79 entry_price=35512.65 is_started=True d_up_crossed_counter=1
+Romeo: _perform_romeo: d_up=35619.18795 d_down=33737.0175 pt=36222.903
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+__get_unix_timestamp
+__get_month_from_timestamp
+__get_year_from_timestamp
+_perform_back_test: Config.BACKTEST_BUY_SIGNAL_TIMESTAMP = 1611734100 Config.BACKTEST_MONTH_INDEX = 0 Config.COIN = BTC Config.BRAIN = Freq_Strategy002 Config.ROMEO_D_UP_PERCENTAGE = 0.30000000000000004 Config.ROMEO_D_UP_MAX = 2
+Romeo: new instance ============ system.version=1.56
+Romeo: START 
+Back_Test_Market_Data_Worker_Thread: progress=0.71 %
+Romeo: _perform_romeo: price=35070.86 entry_price=35070.86 is_started=False d_up_crossed_counter=0
+Back_Test_Market_Data_Worker_Thread: progress=0.71 %
+Romeo: _perform_romeo: price=35044.82 entry_price=35070.86 is_started=False d_up_crossed_counter=0
+Back_Test_Market_Data_Worker_Thread: progress=0.72 %
+Romeo: _perform_romeo: price=34970.9 entry_price=35070.86 is_started=False d_up_crossed_counter=0
+Back_Test_Market_Data_Worker_Thread: progress=0.72 %
+Romeo: _perform_romeo: price=34952.16 entry_price=35070.86 is_started=False d_up_crossed_counter=0
+Shell_Broker get_account_balance_usdt 
+Notifier: send_romeo_message: action=ROMEO_START: OL,OS
+post_request: *Action: **ROMEO_START: OL,OS*
+*Machine: *14303.example.com
+*Version: *1.56
+*Execution ID: *O-1650136339714136795-1
+*Brain: *Freq Strategy002
+*Test mode: *True
+*Coin amount: *0.0 BTC
+*USD amount: *11 USD
+*Entry price: *35070.86 USD
+*D_UP: *0.30000000000000004
+*D_UP_MAX: *2
+*D_UP crossed counter: *0
+*Duration: *None
+*Profit: *None
+*ExitPriceType: *None
+StrategyController: on_sell_signal: sell_reason=sell_signal, current_time=2021-01-27 11:00:00+00:00, coin=BTC, brain=Freq_Strategy002
+__get_unix_timestamp
+StrategyController: on_buy_signal: current_time=2021-01-30 03:40:00+00:00, coin=BTC, brain=Freq_Strategy002
+<Response [200]>
+Shell_Broker open_long 
+Shell_Broker open_short 
+Back_Test_Market_Data_Worker_Thread: progress=0.0 %
+Romeo: _perform_romeo: price=31722.62 entry_price=35070.86 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=35176.07258 d_down=33317.317 pt=35772.277200000004
+Romeo: _perform_romeo: prev_state=None current_state=RomeoState.BELOW_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.0 %
+Romeo: _perform_romeo: price=31674.32 entry_price=35070.86 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=35176.07258 d_down=33317.317 pt=35772.277200000004
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_D_DOWN current_state=RomeoState.BELOW_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.01 %
+Romeo: _perform_romeo: price=31687.77 entry_price=35070.86 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=35176.07258 d_down=33317.317 pt=35772.277200000004
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_D_DOWN current_state=RomeoState.BELOW_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.01 %
+Romeo: _perform_romeo: price=31710.33 entry_price=35070.86 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=35176.07258 d_down=33317.317 pt=35772.277200000004
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_D_DOWN current_state=RomeoState.BELOW_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.01 %
+Romeo: _perform_romeo: price=31743.33 entry_price=35070.86 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=35176.07258 d_down=33317.317 pt=35772.277200000004
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_D_DOWN current_state=RomeoState.BELOW_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.01 %
+Romeo: _perform_romeo: price=31735.51 entry_price=35070.86 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=35176.07258 d_down=33317.317 pt=35772.277200000004
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_D_DOWN current_state=RomeoState.BELOW_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.02 %
+Romeo: _perform_romeo: price=31673.29 entry_price=35070.86 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=35176.07258 d_down=33317.317 pt=35772.277200000004
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_D_DOWN current_state=RomeoState.BELOW_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.02 %
+Romeo: _perform_romeo: price=31643.23 entry_price=35070.86 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=35176.07258 d_down=33317.317 pt=35772.277200000004
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_D_DOWN current_state=RomeoState.BELOW_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.02 %
+Romeo: _perform_romeo: price=31616.51 entry_price=35070.86 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=35176.07258 d_down=33317.317 pt=35772.277200000004
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_D_DOWN current_state=RomeoState.BELOW_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.02 %
+Romeo: _perform_romeo: price=31624.29 entry_price=35070.86 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=35176.07258 d_down=33317.317 pt=35772.277200000004
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_D_DOWN current_state=RomeoState.BELOW_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.02 %
+Romeo: _perform_romeo: price=31587.11 entry_price=35070.86 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=35176.07258 d_down=33317.317 pt=35772.277200000004
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_D_DOWN current_state=RomeoState.BELOW_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.03 %
+Romeo: _perform_romeo: price=31613.94 entry_price=35070.86 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=35176.07258 d_down=33317.317 pt=35772.277200000004
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_D_DOWN current_state=RomeoState.BELOW_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.03 %
+Romeo: _perform_romeo: price=31619.64 entry_price=35070.86 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=35176.07258 d_down=33317.317 pt=35772.277200000004
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_D_DOWN current_state=RomeoState.BELOW_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.03 %
+Romeo: _perform_romeo: price=31625.9 entry_price=35070.86 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=35176.07258 d_down=33317.317 pt=35772.277200000004
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_D_DOWN current_state=RomeoState.BELOW_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.03 %
+Romeo: _perform_romeo: price=31642.88 entry_price=35070.86 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=35176.07258 d_down=33317.317 pt=35772.277200000004
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_D_DOWN current_state=RomeoState.BELOW_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.04 %
+Romeo: _perform_romeo: price=31633.43 entry_price=35070.86 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=35176.07258 d_down=33317.317 pt=35772.277200000004
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_D_DOWN current_state=RomeoState.BELOW_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.04 %
+Romeo: _perform_romeo: price=31632.24 entry_price=35070.86 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=35176.07258 d_down=33317.317 pt=35772.277200000004
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_D_DOWN current_state=RomeoState.BELOW_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.04 %
+Romeo: _perform_romeo: price=31555.29 entry_price=35070.86 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=35176.07258 d_down=33317.317 pt=35772.277200000004
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_D_DOWN current_state=RomeoState.BELOW_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.04 %
+Romeo: _perform_romeo: price=31569.59 entry_price=35070.86 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=35176.07258 d_down=33317.317 pt=35772.277200000004
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_D_DOWN current_state=RomeoState.BELOW_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.04 %
+Romeo: _perform_romeo: price=31594.42 entry_price=35070.86 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=35176.07258 d_down=33317.317 pt=35772.277200000004
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_D_DOWN current_state=RomeoState.BELOW_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.05 %
+Romeo: _perform_romeo: price=31583.18 entry_price=35070.86 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=35176.07258 d_down=33317.317 pt=35772.277200000004
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_D_DOWN current_state=RomeoState.BELOW_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.05 %
+Romeo: _perform_romeo: price=31605.05 entry_price=35070.86 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=35176.07258 d_down=33317.317 pt=35772.277200000004
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_D_DOWN current_state=RomeoState.BELOW_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.05 %
+Romeo: _perform_romeo: price=31626.58 entry_price=35070.86 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=35176.07258 d_down=33317.317 pt=35772.277200000004
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_D_DOWN current_state=RomeoState.BELOW_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.05 %
+Romeo: _perform_romeo: price=31604.82 entry_price=35070.86 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=35176.07258 d_down=33317.317 pt=35772.277200000004
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_D_DOWN current_state=RomeoState.BELOW_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.06 %
+Romeo: _perform_romeo: price=31620.0 entry_price=35070.86 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=35176.07258 d_down=33317.317 pt=35772.277200000004
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_D_DOWN current_state=RomeoState.BELOW_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.06 %
+Romeo: _perform_romeo: price=31630.26 entry_price=35070.86 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=35176.07258 d_down=33317.317 pt=35772.277200000004
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_D_DOWN current_state=RomeoState.BELOW_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.06 %
+Romeo: _perform_romeo: price=31624.04 entry_price=35070.86 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=35176.07258 d_down=33317.317 pt=35772.277200000004
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_D_DOWN current_state=RomeoState.BELOW_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.06 %
+Romeo: _perform_romeo: price=31645.17 entry_price=35070.86 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=35176.07258 d_down=33317.317 pt=35772.277200000004
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_D_DOWN current_state=RomeoState.BELOW_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.06 %
+Romeo: _perform_romeo: price=31659.8 entry_price=35070.86 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=35176.07258 d_down=33317.317 pt=35772.277200000004
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_D_DOWN current_state=RomeoState.BELOW_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.07 %
+Romeo: _perform_romeo: price=31659.44 entry_price=35070.86 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=35176.07258 d_down=33317.317 pt=35772.277200000004
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_D_DOWN current_state=RomeoState.BELOW_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.07 %
+Romeo: _perform_romeo: price=31666.36 entry_price=35070.86 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=35176.07258 d_down=33317.317 pt=35772.277200000004
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_D_DOWN current_state=RomeoState.BELOW_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.07 %
+Romeo: _perform_romeo: price=31664.92 entry_price=35070.86 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=35176.07258 d_down=33317.317 pt=35772.277200000004
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_D_DOWN current_state=RomeoState.BELOW_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.07 %
+Romeo: _perform_romeo: price=31675.19 entry_price=35070.86 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=35176.07258 d_down=33317.317 pt=35772.277200000004
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_D_DOWN current_state=RomeoState.BELOW_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.08 %
+Romeo: _perform_romeo: price=31711.52 entry_price=35070.86 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=35176.07258 d_down=33317.317 pt=35772.277200000004
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_D_DOWN current_state=RomeoState.BELOW_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.08 %
+Romeo: _perform_romeo: price=31669.75 entry_price=35070.86 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=35176.07258 d_down=33317.317 pt=35772.277200000004
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_D_DOWN current_state=RomeoState.BELOW_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.08 %
+Romeo: _perform_romeo: price=31630.01 entry_price=35070.86 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=35176.07258 d_down=33317.317 pt=35772.277200000004
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_D_DOWN current_state=RomeoState.BELOW_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.08 %
+Romeo: _perform_romeo: price=31647.32 entry_price=35070.86 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=35176.07258 d_down=33317.317 pt=35772.277200000004
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_D_DOWN current_state=RomeoState.BELOW_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.09 %
+Romeo: _perform_romeo: price=31647.41 entry_price=35070.86 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=35176.07258 d_down=33317.317 pt=35772.277200000004
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_D_DOWN current_state=RomeoState.BELOW_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.09 %
+Romeo: _perform_romeo: price=31562.05 entry_price=35070.86 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=35176.07258 d_down=33317.317 pt=35772.277200000004
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_D_DOWN current_state=RomeoState.BELOW_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.09 %
+Romeo: _perform_romeo: price=31541.75 entry_price=35070.86 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=35176.07258 d_down=33317.317 pt=35772.277200000004
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_D_DOWN current_state=RomeoState.BELOW_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.09 %
+Romeo: _perform_romeo: price=31505.84 entry_price=35070.86 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=35176.07258 d_down=33317.317 pt=35772.277200000004
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_D_DOWN current_state=RomeoState.BELOW_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.09 %
+Romeo: _perform_romeo: price=31502.4 entry_price=35070.86 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=35176.07258 d_down=33317.317 pt=35772.277200000004
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_D_DOWN current_state=RomeoState.BELOW_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.1 %
+Romeo: _perform_romeo: price=31459.47 entry_price=35070.86 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=35176.07258 d_down=33317.317 pt=35772.277200000004
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_D_DOWN current_state=RomeoState.BELOW_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.1 %
+Romeo: _perform_romeo: price=31460.66 entry_price=35070.86 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=35176.07258 d_down=33317.317 pt=35772.277200000004
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_D_DOWN current_state=RomeoState.BELOW_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.1 %
+Romeo: _perform_romeo: price=31387.14 entry_price=35070.86 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=35176.07258 d_down=33317.317 pt=35772.277200000004
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_D_DOWN current_state=RomeoState.BELOW_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.1 %
+Romeo: _perform_romeo: price=31410.07 entry_price=35070.86 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=35176.07258 d_down=33317.317 pt=35772.277200000004
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_D_DOWN current_state=RomeoState.BELOW_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.11 %
+Romeo: _perform_romeo: price=31361.23 entry_price=35070.86 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=35176.07258 d_down=33317.317 pt=35772.277200000004
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_D_DOWN current_state=RomeoState.BELOW_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.11 %
+Romeo: _perform_romeo: price=31295.03 entry_price=35070.86 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=35176.07258 d_down=33317.317 pt=35772.277200000004
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_D_DOWN current_state=RomeoState.BELOW_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.11 %
+Romeo: _perform_romeo: price=31279.4 entry_price=35070.86 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=35176.07258 d_down=33317.317 pt=35772.277200000004
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_D_DOWN current_state=RomeoState.BELOW_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.11 %
+Romeo: _perform_romeo: price=31336.06 entry_price=35070.86 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=35176.07258 d_down=33317.317 pt=35772.277200000004
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_D_DOWN current_state=RomeoState.BELOW_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.11 %
+Romeo: _perform_romeo: price=31333.62 entry_price=35070.86 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=35176.07258 d_down=33317.317 pt=35772.277200000004
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_D_DOWN current_state=RomeoState.BELOW_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.12 %
+Romeo: _perform_romeo: price=31365.78 entry_price=35070.86 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=35176.07258 d_down=33317.317 pt=35772.277200000004
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_D_DOWN current_state=RomeoState.BELOW_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.12 %
+Romeo: _perform_romeo: price=31355.01 entry_price=35070.86 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=35176.07258 d_down=33317.317 pt=35772.277200000004
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_D_DOWN current_state=RomeoState.BELOW_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.12 %
+Romeo: _perform_romeo: price=31354.04 entry_price=35070.86 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=35176.07258 d_down=33317.317 pt=35772.277200000004
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_D_DOWN current_state=RomeoState.BELOW_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.12 %
+Romeo: _perform_romeo: price=31306.25 entry_price=35070.86 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=35176.07258 d_down=33317.317 pt=35772.277200000004
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_D_DOWN current_state=RomeoState.BELOW_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.13 %
+Romeo: _perform_romeo: price=31230.36 entry_price=35070.86 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=35176.07258 d_down=33317.317 pt=35772.277200000004
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_D_DOWN current_state=RomeoState.BELOW_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.13 %
+Romeo: _perform_romeo: price=31275.37 entry_price=35070.86 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=35176.07258 d_down=33317.317 pt=35772.277200000004
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_D_DOWN current_state=RomeoState.BELOW_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.13 %
+Romeo: _perform_romeo: price=31276.99 entry_price=35070.86 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=35176.07258 d_down=33317.317 pt=35772.277200000004
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_D_DOWN current_state=RomeoState.BELOW_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.13 %
+Romeo: _perform_romeo: price=31214.5 entry_price=35070.86 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=35176.07258 d_down=33317.317 pt=35772.277200000004
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_D_DOWN current_state=RomeoState.BELOW_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.13 %
+Romeo: _perform_romeo: price=31250.0 entry_price=35070.86 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=35176.07258 d_down=33317.317 pt=35772.277200000004
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_D_DOWN current_state=RomeoState.BELOW_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.14 %
+Romeo: _perform_romeo: price=31221.78 entry_price=35070.86 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=35176.07258 d_down=33317.317 pt=35772.277200000004
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_D_DOWN current_state=RomeoState.BELOW_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.14 %
+Romeo: _perform_romeo: price=31274.54 entry_price=35070.86 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=35176.07258 d_down=33317.317 pt=35772.277200000004
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_D_DOWN current_state=RomeoState.BELOW_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.14 %
+Romeo: _perform_romeo: price=31214.09 entry_price=35070.86 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=35176.07258 d_down=33317.317 pt=35772.277200000004
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_D_DOWN current_state=RomeoState.BELOW_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.14 %
+Romeo: _perform_romeo: price=31198.43 entry_price=35070.86 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=35176.07258 d_down=33317.317 pt=35772.277200000004
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_D_DOWN current_state=RomeoState.BELOW_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.15 %
+Romeo: _perform_romeo: price=31172.11 entry_price=35070.86 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=35176.07258 d_down=33317.317 pt=35772.277200000004
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_D_DOWN current_state=RomeoState.BELOW_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.15 %
+Romeo: _perform_romeo: price=31251.85 entry_price=35070.86 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=35176.07258 d_down=33317.317 pt=35772.277200000004
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_D_DOWN current_state=RomeoState.BELOW_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.15 %
+Romeo: _perform_romeo: price=31232.98 entry_price=35070.86 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=35176.07258 d_down=33317.317 pt=35772.277200000004
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_D_DOWN current_state=RomeoState.BELOW_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.15 %
+Romeo: _perform_romeo: price=31247.91 entry_price=35070.86 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=35176.07258 d_down=33317.317 pt=35772.277200000004
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_D_DOWN current_state=RomeoState.BELOW_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.15 %
+Romeo: _perform_romeo: price=31250.0 entry_price=35070.86 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=35176.07258 d_down=33317.317 pt=35772.277200000004
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_D_DOWN current_state=RomeoState.BELOW_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.16 %
+Romeo: _perform_romeo: price=31205.41 entry_price=35070.86 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=35176.07258 d_down=33317.317 pt=35772.277200000004
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_D_DOWN current_state=RomeoState.BELOW_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.16 %
+Romeo: _perform_romeo: price=31099.31 entry_price=35070.86 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=35176.07258 d_down=33317.317 pt=35772.277200000004
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_D_DOWN current_state=RomeoState.BELOW_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.16 %
+Romeo: _perform_romeo: price=31050.0 entry_price=35070.86 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=35176.07258 d_down=33317.317 pt=35772.277200000004
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_D_DOWN current_state=RomeoState.BELOW_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.16 %
+Romeo: _perform_romeo: price=31091.11 entry_price=35070.86 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=35176.07258 d_down=33317.317 pt=35772.277200000004
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_D_DOWN current_state=RomeoState.BELOW_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.17 %
+Romeo: _perform_romeo: price=31082.49 entry_price=35070.86 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=35176.07258 d_down=33317.317 pt=35772.277200000004
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_D_DOWN current_state=RomeoState.BELOW_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.17 %
+Romeo: _perform_romeo: price=30986.0 entry_price=35070.86 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=35176.07258 d_down=33317.317 pt=35772.277200000004
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_D_DOWN current_state=RomeoState.BELOW_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.17 %
+Romeo: _perform_romeo: price=30996.92 entry_price=35070.86 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=35176.07258 d_down=33317.317 pt=35772.277200000004
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_D_DOWN current_state=RomeoState.BELOW_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.17 %
+Romeo: _perform_romeo: price=31005.93 entry_price=35070.86 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=35176.07258 d_down=33317.317 pt=35772.277200000004
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_D_DOWN current_state=RomeoState.BELOW_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.17 %
+Romeo: _perform_romeo: price=30976.82 entry_price=35070.86 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=35176.07258 d_down=33317.317 pt=35772.277200000004
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_D_DOWN current_state=RomeoState.BELOW_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.18 %
+Romeo: _perform_romeo: price=30975.55 entry_price=35070.86 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=35176.07258 d_down=33317.317 pt=35772.277200000004
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_D_DOWN current_state=RomeoState.BELOW_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.18 %
+Romeo: _perform_romeo: price=30923.76 entry_price=35070.86 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=35176.07258 d_down=33317.317 pt=35772.277200000004
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_D_DOWN current_state=RomeoState.BELOW_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.18 %
+Romeo: _perform_romeo: price=30924.56 entry_price=35070.86 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=35176.07258 d_down=33317.317 pt=35772.277200000004
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_D_DOWN current_state=RomeoState.BELOW_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.18 %
+Romeo: _perform_romeo: price=30937.76 entry_price=35070.86 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=35176.07258 d_down=33317.317 pt=35772.277200000004
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_D_DOWN current_state=RomeoState.BELOW_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.19 %
+Romeo: _perform_romeo: price=30867.05 entry_price=35070.86 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=35176.07258 d_down=33317.317 pt=35772.277200000004
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_D_DOWN current_state=RomeoState.BELOW_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.19 %
+Romeo: _perform_romeo: price=30950.8 entry_price=35070.86 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=35176.07258 d_down=33317.317 pt=35772.277200000004
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_D_DOWN current_state=RomeoState.BELOW_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.19 %
+Romeo: _perform_romeo: price=30968.6 entry_price=35070.86 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=35176.07258 d_down=33317.317 pt=35772.277200000004
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_D_DOWN current_state=RomeoState.BELOW_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.19 %
+Romeo: _perform_romeo: price=30992.2 entry_price=35070.86 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=35176.07258 d_down=33317.317 pt=35772.277200000004
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_D_DOWN current_state=RomeoState.BELOW_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.19 %
+Romeo: _perform_romeo: price=30974.5 entry_price=35070.86 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=35176.07258 d_down=33317.317 pt=35772.277200000004
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_D_DOWN current_state=RomeoState.BELOW_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.2 %
+Romeo: _perform_romeo: price=30932.52 entry_price=35070.86 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=35176.07258 d_down=33317.317 pt=35772.277200000004
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_D_DOWN current_state=RomeoState.BELOW_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.2 %
+Romeo: _perform_romeo: price=30958.39 entry_price=35070.86 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=35176.07258 d_down=33317.317 pt=35772.277200000004
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_D_DOWN current_state=RomeoState.BELOW_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.2 %
+Romeo: _perform_romeo: price=30935.01 entry_price=35070.86 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=35176.07258 d_down=33317.317 pt=35772.277200000004
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_D_DOWN current_state=RomeoState.BELOW_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.2 %
+Romeo: _perform_romeo: price=30964.24 entry_price=35070.86 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=35176.07258 d_down=33317.317 pt=35772.277200000004
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_D_DOWN current_state=RomeoState.BELOW_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.21 %
+Romeo: _perform_romeo: price=30970.0 entry_price=35070.86 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=35176.07258 d_down=33317.317 pt=35772.277200000004
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_D_DOWN current_state=RomeoState.BELOW_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.21 %
+Romeo: _perform_romeo: price=30972.44 entry_price=35070.86 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=35176.07258 d_down=33317.317 pt=35772.277200000004
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_D_DOWN current_state=RomeoState.BELOW_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.21 %
+Romeo: _perform_romeo: price=31055.45 entry_price=35070.86 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=35176.07258 d_down=33317.317 pt=35772.277200000004
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_D_DOWN current_state=RomeoState.BELOW_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.21 %
+Romeo: _perform_romeo: price=30973.5 entry_price=35070.86 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=35176.07258 d_down=33317.317 pt=35772.277200000004
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_D_DOWN current_state=RomeoState.BELOW_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.22 %
+Romeo: _perform_romeo: price=30932.98 entry_price=35070.86 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=35176.07258 d_down=33317.317 pt=35772.277200000004
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_D_DOWN current_state=RomeoState.BELOW_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.22 %
+Romeo: _perform_romeo: price=31045.19 entry_price=35070.86 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=35176.07258 d_down=33317.317 pt=35772.277200000004
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_D_DOWN current_state=RomeoState.BELOW_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.22 %
+Romeo: _perform_romeo: price=31079.29 entry_price=35070.86 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=35176.07258 d_down=33317.317 pt=35772.277200000004
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_D_DOWN current_state=RomeoState.BELOW_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.22 %
+Romeo: _perform_romeo: price=31152.77 entry_price=35070.86 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=35176.07258 d_down=33317.317 pt=35772.277200000004
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_D_DOWN current_state=RomeoState.BELOW_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.22 %
+Romeo: _perform_romeo: price=31132.73 entry_price=35070.86 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=35176.07258 d_down=33317.317 pt=35772.277200000004
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_D_DOWN current_state=RomeoState.BELOW_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.23 %
+Romeo: _perform_romeo: price=31136.31 entry_price=35070.86 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=35176.07258 d_down=33317.317 pt=35772.277200000004
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_D_DOWN current_state=RomeoState.BELOW_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.23 %
+Romeo: _perform_romeo: price=31083.1 entry_price=35070.86 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=35176.07258 d_down=33317.317 pt=35772.277200000004
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_D_DOWN current_state=RomeoState.BELOW_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.23 %
+Romeo: _perform_romeo: price=31070.02 entry_price=35070.86 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=35176.07258 d_down=33317.317 pt=35772.277200000004
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_D_DOWN current_state=RomeoState.BELOW_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.23 %
+Romeo: _perform_romeo: price=31108.08 entry_price=35070.86 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=35176.07258 d_down=33317.317 pt=35772.277200000004
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_D_DOWN current_state=RomeoState.BELOW_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.24 %
+Romeo: _perform_romeo: price=31110.31 entry_price=35070.86 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=35176.07258 d_down=33317.317 pt=35772.277200000004
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_D_DOWN current_state=RomeoState.BELOW_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.24 %
+Romeo: _perform_romeo: price=31089.66 entry_price=35070.86 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=35176.07258 d_down=33317.317 pt=35772.277200000004
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_D_DOWN current_state=RomeoState.BELOW_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.24 %
+Romeo: _perform_romeo: price=31233.29 entry_price=35070.86 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=35176.07258 d_down=33317.317 pt=35772.277200000004
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_D_DOWN current_state=RomeoState.BELOW_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.24 %
+Romeo: _perform_romeo: price=31208.65 entry_price=35070.86 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=35176.07258 d_down=33317.317 pt=35772.277200000004
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_D_DOWN current_state=RomeoState.BELOW_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.24 %
+Romeo: _perform_romeo: price=31233.78 entry_price=35070.86 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=35176.07258 d_down=33317.317 pt=35772.277200000004
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_D_DOWN current_state=RomeoState.BELOW_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.25 %
+Romeo: _perform_romeo: price=31214.27 entry_price=35070.86 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=35176.07258 d_down=33317.317 pt=35772.277200000004
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_D_DOWN current_state=RomeoState.BELOW_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.25 %
+Romeo: _perform_romeo: price=31204.06 entry_price=35070.86 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=35176.07258 d_down=33317.317 pt=35772.277200000004
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_D_DOWN current_state=RomeoState.BELOW_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.25 %
+Romeo: _perform_romeo: price=31184.37 entry_price=35070.86 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=35176.07258 d_down=33317.317 pt=35772.277200000004
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_D_DOWN current_state=RomeoState.BELOW_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.25 %
+Romeo: _perform_romeo: price=31150.01 entry_price=35070.86 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=35176.07258 d_down=33317.317 pt=35772.277200000004
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_D_DOWN current_state=RomeoState.BELOW_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.26 %
+Romeo: _perform_romeo: price=31197.29 entry_price=35070.86 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=35176.07258 d_down=33317.317 pt=35772.277200000004
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_D_DOWN current_state=RomeoState.BELOW_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.26 %
+Romeo: _perform_romeo: price=31152.94 entry_price=35070.86 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=35176.07258 d_down=33317.317 pt=35772.277200000004
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_D_DOWN current_state=RomeoState.BELOW_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.26 %
+Romeo: _perform_romeo: price=31103.46 entry_price=35070.86 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=35176.07258 d_down=33317.317 pt=35772.277200000004
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_D_DOWN current_state=RomeoState.BELOW_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.26 %
+Romeo: _perform_romeo: price=31095.67 entry_price=35070.86 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=35176.07258 d_down=33317.317 pt=35772.277200000004
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_D_DOWN current_state=RomeoState.BELOW_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.26 %
+Romeo: _perform_romeo: price=31109.44 entry_price=35070.86 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=35176.07258 d_down=33317.317 pt=35772.277200000004
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_D_DOWN current_state=RomeoState.BELOW_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.27 %
+Romeo: _perform_romeo: price=31141.48 entry_price=35070.86 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=35176.07258 d_down=33317.317 pt=35772.277200000004
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_D_DOWN current_state=RomeoState.BELOW_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.27 %
+Romeo: _perform_romeo: price=31157.48 entry_price=35070.86 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=35176.07258 d_down=33317.317 pt=35772.277200000004
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_D_DOWN current_state=RomeoState.BELOW_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.27 %
+Romeo: _perform_romeo: price=31209.54 entry_price=35070.86 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=35176.07258 d_down=33317.317 pt=35772.277200000004
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_D_DOWN current_state=RomeoState.BELOW_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.27 %
+Romeo: _perform_romeo: price=31153.14 entry_price=35070.86 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=35176.07258 d_down=33317.317 pt=35772.277200000004
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_D_DOWN current_state=RomeoState.BELOW_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.28 %
+Romeo: _perform_romeo: price=31176.87 entry_price=35070.86 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=35176.07258 d_down=33317.317 pt=35772.277200000004
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_D_DOWN current_state=RomeoState.BELOW_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.28 %
+Romeo: _perform_romeo: price=31224.52 entry_price=35070.86 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=35176.07258 d_down=33317.317 pt=35772.277200000004
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_D_DOWN current_state=RomeoState.BELOW_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.28 %
+Romeo: _perform_romeo: price=31201.05 entry_price=35070.86 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=35176.07258 d_down=33317.317 pt=35772.277200000004
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_D_DOWN current_state=RomeoState.BELOW_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.28 %
+Notifier: send_romeo_message: action=ROMEO: UPWARDS [TOP]: Price Reached SS: FINISH (PROFIT)
+post_request: *Action: **ROMEO: UPWARDS [TOP]: Price Reached SS: FINISH (PROFIT)*
+*Machine: *14303.example.com
+*Version: *1.56
+*Execution ID: *O-1650136339714136795-2
+*Brain: *Freq Strategy002
+*Test mode: *True
+*Coin amount: *0.0 BTC
+*USD amount: *11 USD
+*Entry price: *35070.86 USD
+*D_UP: *0.30000000000000004
+*D_UP_MAX: *2
+*D_UP crossed counter: *0
+*Duration: *None
+*Profit: *None
+*ExitPriceType: *None
+__get_unix_timestamp
+__get_month_from_timestamp
+__get_year_from_timestamp
+_perform_back_test: Config.BACKTEST_BUY_SIGNAL_TIMESTAMP = 1611974400 Config.BACKTEST_MONTH_INDEX = 0 Config.COIN = BTC Config.BRAIN = Freq_Strategy002 Config.ROMEO_D_UP_PERCENTAGE = 0.30000000000000004 Config.ROMEO_D_UP_MAX = 2
+Romeo: new instance ============ system.version=1.56
+Romeo: START 
+Shell_Broker get_account_balance_usdt 
+Notifier: send_romeo_message: action=ROMEO_START: OL,OS
+post_request: *Action: **ROMEO_START: OL,OS*
+*Machine: *14303.example.com
+*Version: *1.56
+*Execution ID: *O-1650136340767970174-1
+*Brain: *Freq Strategy002
+*Test mode: *True
+*Coin amount: *0.0 BTC
+*USD amount: *11 USD
+*Entry price: *None USD
+*D_UP: *0.30000000000000004
+*D_UP_MAX: *2
+*D_UP crossed counter: *0
+*Duration: *None
+*Profit: *None
+*ExitPriceType: *None
+StrategyController: on_sell_signal: sell_reason=roi, current_time=2021-01-30 04:40:00+00:00, coin=BTC, brain=Freq_Strategy002
+__get_unix_timestamp
+2022-04-16 21:12:20,904 - freqtrade.misc - INFO - dumping json to "/root/workspace2/freqtrade/user_data/backtest_results/backtest-result-2022-04-16_21-12-20.meta.json"
+2022-04-16 21:12:20,910 - freqtrade.misc - INFO - dumping json to "/root/workspace2/freqtrade/user_data/backtest_results/backtest-result-2022-04-16_21-12-20.json"
+2022-04-16 21:12:20,914 - freqtrade.misc - INFO - dumping json to "/root/workspace2/freqtrade/user_data/backtest_results/.last_result.json"
+Result for strategy Strategy002
+========================================================== BACKTESTING REPORT =========================================================
+|     Pair |   Buys |   Avg Profit % |   Cum Profit % |   Tot Profit USDT |   Tot Profit % |   Avg Duration |   Win  Draw  Loss  Win% |
+|----------+--------+----------------+----------------+-------------------+----------------+----------------+-------------------------|
+| BTC/USDT |      3 |           0.40 |           1.21 |             0.605 |           0.06 |        2:48:00 |     3     0     0   100 |
+|    TOTAL |      3 |           0.40 |           1.21 |             0.605 |           0.06 |        2:48:00 |     3     0     0   100 |
+========================================================== BUY TAG STATS ===========================================================
+|   TAG |   Buys |   Avg Profit % |   Cum Profit % |   Tot Profit USDT |   Tot Profit % |   Avg Duration |   Win  Draw  Loss  Win% |
+|-------+--------+----------------+----------------+-------------------+----------------+----------------+-------------------------|
+| TOTAL |      3 |           0.40 |           1.21 |             0.605 |           0.06 |        2:48:00 |     3     0     0   100 |
+===================================================== SELL REASON STATS =====================================================
+|   Sell Reason |   Sells |   Win  Draws  Loss  Win% |   Avg Profit % |   Cum Profit % |   Tot Profit USDT |   Tot Profit % |
+|---------------+---------+--------------------------+----------------+----------------+-------------------+----------------|
+|   sell_signal |       2 |      2     0     0   100 |            0.1 |           0.21 |             0.105 |           0.21 |
+|           roi |       1 |      1     0     0   100 |            1   |           1    |             0.5   |           1    |
+====================================================== LEFT OPEN TRADES REPORT ======================================================
+|   Pair |   Buys |   Avg Profit % |   Cum Profit % |   Tot Profit USDT |   Tot Profit % |   Avg Duration |   Win  Draw  Loss  Win% |
+|--------+--------+----------------+----------------+-------------------+----------------+----------------+-------------------------|
+|  TOTAL |      0 |           0.00 |           0.00 |             0.000 |           0.00 |           0:00 |     0     0     0     0 |
+================== SUMMARY METRICS ===================
+| Metric                 | Value                     |
+|------------------------+---------------------------|
+| Backtesting from       | 2021-01-01 00:00:00       |
+| Backtesting to         | 2021-01-31 22:50:00       |
+| Max open trades        | 1                         |
+|                        |                           |
+| Total/Daily Avg Trades | 3 / 0.1                   |
+| Starting balance       | 1000 USDT                 |
+| Final balance          | 1000.605 USDT             |
+| Absolute profit        | 0.605 USDT                |
+| Total profit %         | 0.06%                     |
+| Trades per day         | 0.1                       |
+| Avg. daily profit %    | 0.00%                     |
+| Avg. stake amount      | 50 USDT                   |
+| Total trade volume     | 150 USDT                  |
+|                        |                           |
+| Best Pair              | BTC/USDT 1.21%            |
+| Worst Pair             | BTC/USDT 1.21%            |
+| Best trade             | BTC/USDT 1.00%            |
+| Worst trade            | BTC/USDT 0.01%            |
+| Best day               | 0.5 USDT                  |
+| Worst day              | 0 USDT                    |
+| Days win/draw/lose     | 3 / 8 / 0                 |
+| Avg. Duration Winners  | 2:48:00                   |
+| Avg. Duration Loser    | 0:00:00                   |
+| Rejected Buy signals   | 0                         |
+| Entry/Exit Timeouts    | 0 / 0                     |
+|                        |                           |
+| Min balance            | 0 USDT                    |
+| Max balance            | 0 USDT                    |
+| Drawdown (Account)     | 0.00%                     |
+| Drawdown               | 0 USDT                    |
+| Drawdown high          | 0 USDT                    |
+| Drawdown low           | 0 USDT                    |
+| Drawdown Start         | 1970-01-01 00:00:00+00:00 |
+| Drawdown End           | 1970-01-01 00:00:00+00:00 |
+| Market change          | 13.66%                    |
+======================================================
+
+<Response [200]>
+Romeo: FINISH: is_started=True
+Notifier: send_romeo_message: action=ROMEO_FINISH: CL,CS
+post_request: *Action: **ROMEO_FINISH: CL,CS*
+*Machine: *14303.example.com
+*Version: *1.56
+*Execution ID: *O-1650136339714136795-3
+*Brain: *Freq Strategy002
+*Test mode: *True
+*Coin amount: *0.0 BTC
+*USD amount: *11 USD
+*Entry price: *35070.86 USD
+*D_UP: *0.30000000000000004
+*D_UP_MAX: *2
+*D_UP crossed counter: *0
+*Duration: *4 sec
+*Profit: *0 % (0.0 USD), Current Price: 31201.05 USD, SSExitPrice: 31134.54 USD
+*ExitPriceType: *SS
+<Response [200]>
+Shell_Broker open_long 
+Shell_Broker open_short 
+Back_Test_Market_Data_Worker_Thread: progress=0.0 %
+Romeo: _perform_romeo: price=34270.35 entry_price=34270.35 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=34373.161049999995 d_down=32556.832499999997 pt=34955.757
+Romeo: _perform_romeo: prev_state=None current_state=None
+Back_Test_Market_Data_Worker_Thread: progress=0.0 %
+Romeo: _perform_romeo: price=34313.87 entry_price=34270.35 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=34373.161049999995 d_down=32556.832499999997 pt=34955.757
+Romeo: _perform_romeo: prev_state=None current_state=RomeoState.ABOVE_ENTRY_BELOW_D_UP
+Back_Test_Market_Data_Worker_Thread: progress=0.01 %
+Romeo: _perform_romeo: price=34237.53 entry_price=34270.35 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=34373.161049999995 d_down=32556.832499999997 pt=34955.757
+Romeo: _perform_romeo: prev_state=RomeoState.ABOVE_ENTRY_BELOW_D_UP current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.01 %
+Romeo: _perform_romeo: price=34246.9 entry_price=34270.35 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=34373.161049999995 d_down=32556.832499999997 pt=34955.757
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.01 %
+Romeo: _perform_romeo: price=34195.81 entry_price=34270.35 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=34373.161049999995 d_down=32556.832499999997 pt=34955.757
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.01 %
+Romeo: _perform_romeo: price=34163.05 entry_price=34270.35 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=34373.161049999995 d_down=32556.832499999997 pt=34955.757
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.02 %
+Romeo: _perform_romeo: price=34134.78 entry_price=34270.35 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=34373.161049999995 d_down=32556.832499999997 pt=34955.757
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.02 %
+Romeo: _perform_romeo: price=34038.22 entry_price=34270.35 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=34373.161049999995 d_down=32556.832499999997 pt=34955.757
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.02 %
+Romeo: _perform_romeo: price=33972.25 entry_price=34270.35 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=34373.161049999995 d_down=32556.832499999997 pt=34955.757
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.02 %
+Romeo: _perform_romeo: price=34039.99 entry_price=34270.35 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=34373.161049999995 d_down=32556.832499999997 pt=34955.757
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.02 %
+Romeo: _perform_romeo: price=33982.25 entry_price=34270.35 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=34373.161049999995 d_down=32556.832499999997 pt=34955.757
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.03 %
+Romeo: _perform_romeo: price=34063.91 entry_price=34270.35 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=34373.161049999995 d_down=32556.832499999997 pt=34955.757
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.03 %
+Romeo: _perform_romeo: price=34093.5 entry_price=34270.35 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=34373.161049999995 d_down=32556.832499999997 pt=34955.757
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.03 %
+Romeo: _perform_romeo: price=33947.61 entry_price=34270.35 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=34373.161049999995 d_down=32556.832499999997 pt=34955.757
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.03 %
+Romeo: _perform_romeo: price=33920.35 entry_price=34270.35 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=34373.161049999995 d_down=32556.832499999997 pt=34955.757
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.04 %
+Romeo: _perform_romeo: price=33932.06 entry_price=34270.35 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=34373.161049999995 d_down=32556.832499999997 pt=34955.757
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.04 %
+Romeo: _perform_romeo: price=33937.32 entry_price=34270.35 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=34373.161049999995 d_down=32556.832499999997 pt=34955.757
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.04 %
+Romeo: _perform_romeo: price=33947.17 entry_price=34270.35 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=34373.161049999995 d_down=32556.832499999997 pt=34955.757
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.04 %
+Romeo: _perform_romeo: price=33878.97 entry_price=34270.35 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=34373.161049999995 d_down=32556.832499999997 pt=34955.757
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.04 %
+Romeo: _perform_romeo: price=33862.51 entry_price=34270.35 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=34373.161049999995 d_down=32556.832499999997 pt=34955.757
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.05 %
+Romeo: _perform_romeo: price=33925.0 entry_price=34270.35 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=34373.161049999995 d_down=32556.832499999997 pt=34955.757
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.05 %
+Romeo: _perform_romeo: price=33919.8 entry_price=34270.35 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=34373.161049999995 d_down=32556.832499999997 pt=34955.757
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.05 %
+Romeo: _perform_romeo: price=33825.27 entry_price=34270.35 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=34373.161049999995 d_down=32556.832499999997 pt=34955.757
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.05 %
+Romeo: _perform_romeo: price=33893.17 entry_price=34270.35 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=34373.161049999995 d_down=32556.832499999997 pt=34955.757
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.06 %
+Romeo: _perform_romeo: price=33794.87 entry_price=34270.35 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=34373.161049999995 d_down=32556.832499999997 pt=34955.757
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.06 %
+Romeo: _perform_romeo: price=33800.0 entry_price=34270.35 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=34373.161049999995 d_down=32556.832499999997 pt=34955.757
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.06 %
+Romeo: _perform_romeo: price=33858.28 entry_price=34270.35 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=34373.161049999995 d_down=32556.832499999997 pt=34955.757
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.06 %
+Romeo: _perform_romeo: price=33858.16 entry_price=34270.35 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=34373.161049999995 d_down=32556.832499999997 pt=34955.757
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.06 %
+Romeo: _perform_romeo: price=33944.35 entry_price=34270.35 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=34373.161049999995 d_down=32556.832499999997 pt=34955.757
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.07 %
+Romeo: _perform_romeo: price=33889.26 entry_price=34270.35 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=34373.161049999995 d_down=32556.832499999997 pt=34955.757
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.07 %
+Romeo: _perform_romeo: price=33910.88 entry_price=34270.35 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=34373.161049999995 d_down=32556.832499999997 pt=34955.757
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.07 %
+Romeo: _perform_romeo: price=33912.51 entry_price=34270.35 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=34373.161049999995 d_down=32556.832499999997 pt=34955.757
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.07 %
+Romeo: _perform_romeo: price=33841.1 entry_price=34270.35 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=34373.161049999995 d_down=32556.832499999997 pt=34955.757
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.08 %
+Romeo: _perform_romeo: price=33787.73 entry_price=34270.35 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=34373.161049999995 d_down=32556.832499999997 pt=34955.757
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.08 %
+Romeo: _perform_romeo: price=33603.79 entry_price=34270.35 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=34373.161049999995 d_down=32556.832499999997 pt=34955.757
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.08 %
+Romeo: _perform_romeo: price=33608.65 entry_price=34270.35 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=34373.161049999995 d_down=32556.832499999997 pt=34955.757
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.08 %
+Romeo: _perform_romeo: price=33684.51 entry_price=34270.35 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=34373.161049999995 d_down=32556.832499999997 pt=34955.757
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.09 %
+Romeo: _perform_romeo: price=33562.64 entry_price=34270.35 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=34373.161049999995 d_down=32556.832499999997 pt=34955.757
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.09 %
+Romeo: _perform_romeo: price=33585.57 entry_price=34270.35 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=34373.161049999995 d_down=32556.832499999997 pt=34955.757
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.09 %
+Romeo: _perform_romeo: price=33663.11 entry_price=34270.35 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=34373.161049999995 d_down=32556.832499999997 pt=34955.757
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.09 %
+Romeo: _perform_romeo: price=33744.12 entry_price=34270.35 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=34373.161049999995 d_down=32556.832499999997 pt=34955.757
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.09 %
+Romeo: _perform_romeo: price=33763.85 entry_price=34270.35 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=34373.161049999995 d_down=32556.832499999997 pt=34955.757
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.1 %
+Romeo: _perform_romeo: price=33776.47 entry_price=34270.35 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=34373.161049999995 d_down=32556.832499999997 pt=34955.757
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.1 %
+Romeo: _perform_romeo: price=33603.21 entry_price=34270.35 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=34373.161049999995 d_down=32556.832499999997 pt=34955.757
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.1 %
+Romeo: _perform_romeo: price=33500.01 entry_price=34270.35 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=34373.161049999995 d_down=32556.832499999997 pt=34955.757
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.1 %
+Romeo: _perform_romeo: price=33293.1 entry_price=34270.35 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=34373.161049999995 d_down=32556.832499999997 pt=34955.757
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.11 %
+Romeo: _perform_romeo: price=33343.04 entry_price=34270.35 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=34373.161049999995 d_down=32556.832499999997 pt=34955.757
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.11 %
+Romeo: _perform_romeo: price=33434.81 entry_price=34270.35 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=34373.161049999995 d_down=32556.832499999997 pt=34955.757
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.11 %
+Romeo: _perform_romeo: price=33357.1 entry_price=34270.35 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=34373.161049999995 d_down=32556.832499999997 pt=34955.757
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.11 %
+Romeo: _perform_romeo: price=33392.28 entry_price=34270.35 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=34373.161049999995 d_down=32556.832499999997 pt=34955.757
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.11 %
+Romeo: _perform_romeo: price=33435.67 entry_price=34270.35 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=34373.161049999995 d_down=32556.832499999997 pt=34955.757
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.12 %
+Romeo: _perform_romeo: price=33204.08 entry_price=34270.35 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=34373.161049999995 d_down=32556.832499999997 pt=34955.757
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.12 %
+Romeo: _perform_romeo: price=33113.96 entry_price=34270.35 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=34373.161049999995 d_down=32556.832499999997 pt=34955.757
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.12 %
+Romeo: _perform_romeo: price=33134.11 entry_price=34270.35 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=34373.161049999995 d_down=32556.832499999997 pt=34955.757
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.12 %
+Romeo: _perform_romeo: price=33124.51 entry_price=34270.35 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=34373.161049999995 d_down=32556.832499999997 pt=34955.757
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.13 %
+Romeo: _perform_romeo: price=33015.18 entry_price=34270.35 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=34373.161049999995 d_down=32556.832499999997 pt=34955.757
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.13 %
+Romeo: _perform_romeo: price=32958.21 entry_price=34270.35 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=34373.161049999995 d_down=32556.832499999997 pt=34955.757
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.13 %
+Romeo: _perform_romeo: price=33027.66 entry_price=34270.35 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=34373.161049999995 d_down=32556.832499999997 pt=34955.757
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.13 %
+Romeo: _perform_romeo: price=33130.7 entry_price=34270.35 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=34373.161049999995 d_down=32556.832499999997 pt=34955.757
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.13 %
+Romeo: _perform_romeo: price=33014.67 entry_price=34270.35 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=34373.161049999995 d_down=32556.832499999997 pt=34955.757
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN
+Back_Test_Market_Data_Worker_Thread: progress=0.14 %
+Notifier: send_romeo_message: action=ROMEO: UPWARDS [TOP]: Price Reached SS: FINISH (PROFIT)
+post_request: *Action: **ROMEO: UPWARDS [TOP]: Price Reached SS: FINISH (PROFIT)*
+*Machine: *14303.example.com
+*Version: *1.56
+*Execution ID: *O-1650136340767970174-2
+*Brain: *Freq Strategy002
+*Test mode: *True
+*Coin amount: *0.0 BTC
+*USD amount: *11 USD
+*Entry price: *34270.35 USD
+*D_UP: *0.30000000000000004
+*D_UP_MAX: *2
+*D_UP crossed counter: *0
+*Duration: *None
+*Profit: *None
+*ExitPriceType: *None
+<Response [200]>
+Shell_Broker close_long 
+Shell_Broker close_short 
+Romeo: _perform_romeo: price=31134.54 entry_price=34270.35 is_started=True d_up_crossed_counter=0
+Romeo: _perform_romeo: d_up=34373.161049999995 d_down=32556.832499999997 pt=34955.757
+Romeo: _perform_romeo: prev_state=RomeoState.BELOW_ENTRY_ABOVE_D_DOWN current_state=RomeoState.BELOW_D_DOWN
+Notifier: send_romeo_message: action=ROMEO: DOWNWARDS [BOTTOM]: Price Reached D_DOWN: FINISH (NEUTRAL)
+post_request: *Action: **ROMEO: DOWNWARDS [BOTTOM]: Price Reached D_DOWN: FINISH (NEUTRAL)*
+*Machine: *14303.example.com
+*Version: *1.56
+*Execution ID: *O-1650136340767970174-3
+*Brain: *Freq Strategy002
+*Test mode: *True
+*Coin amount: *0.0 BTC
+*USD amount: *11 USD
+*Entry price: *34270.35 USD
+*D_UP: *0.30000000000000004
+*D_UP_MAX: *2
+*D_UP crossed counter: *0
+*Duration: *None
+*Profit: *None
+*ExitPriceType: *None
+<Response [200]>
+Romeo: FINISH: is_started=True
+Notifier: send_romeo_message: action=ROMEO_FINISH: CL,CS
+post_request: *Action: **ROMEO_FINISH: CL,CS*
+*Machine: *14303.example.com
+*Version: *1.56
+*Execution ID: *O-1650136340767970174-4
+*Brain: *Freq Strategy002
+*Test mode: *True
+*Coin amount: *0.0 BTC
+*USD amount: *11 USD
+*Entry price: *34270.35 USD
+*D_UP: *0.30000000000000004
+*D_UP_MAX: *2
+*D_UP crossed counter: *0
+*Duration: *4 sec
+*Profit: *0 % (0.0 USD), Current Price: 31134.54 USD, SSExitPrice: 33160.37 USD
+*ExitPriceType: *SS
+<Response [200]>
+Romeo: FINISH: is_started=True
+Notifier: send_romeo_message: action=ROMEO_FINISH: CL,CS
+post_request: *Action: **ROMEO_FINISH: CL,CS*
+*Machine: *14303.example.com
+*Version: *1.56
+*Execution ID: *O-1650136340767970174-5
+*Brain: *Freq Strategy002
+*Test mode: *True
+*Coin amount: *0.0 BTC
+*USD amount: *11 USD
+*Entry price: *34270.35 USD
+*D_UP: *0.30000000000000004
+*D_UP_MAX: *2
+*D_UP crossed counter: *0
+*Duration: *4 sec
+*Profit: *-0.0 % (-0.0 USD), Current Price: 31134.54 USD
+*ExitPriceType: *D DOWN
+<Response [200]>
+Shell_Broker close_long 
+Shell_Broker close_short 
+Romeo: _perform_romeo: price=33160.37 entry_price=34270.35 is_started=False d_up_crossed_counter=0
+<Response [200]>
+Shell_Broker close_long 
+Shell_Broker close_short 
+2022-04-16 21:12:29,788 - freqtrade.exchange.exchange - INFO - Closing async ccxt session.
