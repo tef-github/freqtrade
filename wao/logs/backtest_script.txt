@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "wao/backtest.py", line 9, in <module>
+    from wao.brain_util import perform_back_test_buy, perform_back_test_sell, clear_execution_state, is_execution_state_open
+  File "/root/workspace2/freqtrade/wao/brain_util.py", line 13, in <module>
+    from romeo import Romeo, RomeoExitPriceType
+  File "/root/workspace/execution/romeo.py", line 9, in <module>
+    from notifier import Notifier
+ImportError: cannot import name 'Notifier' from 'notifier' (/root/workspace2/freqtrade/wao/notifier.py)
