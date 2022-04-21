@@ -27,7 +27,7 @@ def clear_execution_state():
 def write_to_backtest_table(timestamp, coin, brain, time_out_hours, type):
     print("STEP [1]++++++++++++++++++++++++++++++++++++" + ", write_to_backtest_table")
     BrainConfig.BACKTEST_EXECUTION_LIST.append(BacktestExecution(brain, coin, type, time_out_hours, timestamp=timestamp))
-    pickle.dump(str(BrainConfig.BACKTEST_EXECUTION_LIST), open(BrainConfig.BACKTEST_EXECUTION_LIST_FILE_PATH, 'w'))
+    pickle.dump(BrainConfig.BACKTEST_EXECUTION_LIST, open(BrainConfig.BACKTEST_EXECUTION_LIST_FILE_PATH, 'w'))
 
 
 def perform_execute_buy(coin, brain, romeo_pool, time_out_hours):
