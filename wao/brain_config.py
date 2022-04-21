@@ -6,8 +6,8 @@ class BrainConfig:
     BACKTEST_COIN = 'ETH'
     BACKTEST_MONTH_LIST = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']
     BACKTEST_DATA_CLEANER_YEAR = 2021
-    BACKTEST_DATA_CLEANER_MONTH_INDEX = 4
-    IS_BACKTEST = False
+    BACKTEST_DATA_CLEANER_MONTH_INDEX = 0
+    IS_BACKTEST = True
     CHOP_TESTER_WORKSPACE = "workspace2"
     WORKSPACE_PATH = "workspace2" if IS_BACKTEST else "workspace"
     ROOT_DIRECTORY = "/root/"

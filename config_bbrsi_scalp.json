@@ -33,8 +33,6 @@
         "ccxt_config": {},
         "ccxt_async_config": {},
         "pair_whitelist": [
-            "LTC/USDT",
-            "ADA/USDT",
             "XLM/USDT"
 	],
         "pair_blacklist": [
