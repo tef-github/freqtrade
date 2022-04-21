@@ -1,12 +1,11 @@
 # import sys
-# import threading
 # import watchdog
 # import os
 import time
 # import datetime
-from brain_config import BrainConfig
+from wao.brain_config import BrainConfig
 # from wao._429_watcher import _429_Watcher
-from brain_util import perform_back_test_buy, perform_back_test_sell, clear_execution_state, is_execution_state_open
+from wao.brain_util import perform_back_test_buy, perform_back_test_sell, clear_execution_state, is_execution_state_open
 import pickle
 import threading
 # from wao.backtest_execution import BacktestExecution
