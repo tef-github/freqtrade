@@ -1,7 +1,7 @@
 class BrainConfig:
 
-    BACKTEST_DUP = 0.45
-    BACKTEST_MAX_COUNT_DUP = 2
+    BACKTEST_DUP = 0.6
+    BACKTEST_MAX_COUNT_DUP = 4
     BACKTEST_DOWNLOADED_JSON_DATA_FILE_PATH = ""
     BACKTEST_COIN = 'ADA'
     BACKTEST_MONTH_LIST = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']
