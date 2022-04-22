@@ -1,11 +1,11 @@
-from wao.brain_util import perform_execute_buy, perform_execute_sell, write_to_backtest_table
+from wao.brain_util import perform_execute_buy, perform_execute_sell, perform_back_test_buy, perform_back_test_sell, \
+    write_to_backtest_table
 import threading
 from wao.brain_config import BrainConfig
 from wao.brain_util import setup_429
 from wao.notifier import send_start_deliminator_message
 import time
 import os
-import sys
 sys.path.append(BrainConfig.EXECUTION_PATH)
 from config import Config
 
