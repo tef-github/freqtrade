@@ -8,8 +8,12 @@ class BrainConfig:
     BACKTEST_DATA_CLEANER_YEAR = 2021
     BACKTEST_DATA_CLEANER_MONTH_INDEX = 0
     IS_BACKTEST = True
+    CHOP_TESTER_WORKSPACE = "workspace2"
     WORKSPACE_PATH = "workspace2" if IS_BACKTEST else "workspace"
-    _429_DIRECTORY = "/root/" + WORKSPACE_PATH + "/freqtrade/_429_directory/"
+    ROOT_DIRECTORY = "/root/"
+    EXECUTION_PATH = ROOT_DIRECTORY + "workspace/execution"
+    _429_DIRECTORY = ROOT_DIRECTORY + WORKSPACE_PATH + "/freqtrade/_429_directory/"
     IS_PARALLEL_EXECUTION = True
-    BACKTEST_THROTTLE_SECOND = 0.001
-    MODE = "test"
+    BACKTEST_THROTTLE_SECOND = 0.01
+    MODE = "test" # test or prod
+    CUMULATIVE_PROFIT_FILE_PATH = ROOT_DIRECTORY + WORKSPACE_PATH + "/execution/_cumulative_profit.txt"

@@ -1,9 +1,13 @@
+<<<<<<< HEAD
 EXECUTION_PATH = '/root/workspace2/execution'  # do not move this to brain_config.py
 
+=======
+from wao.brain_config import BrainConfig
+>>>>>>> stable
 import requests
 import sys
 
-sys.path.append(EXECUTION_PATH)
+sys.path.append(BrainConfig.EXECUTION_PATH)
 from config import Config
 from _429_file_util import delete_429_file, write_to_429_file
 
