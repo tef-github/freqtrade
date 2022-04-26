@@ -8,10 +8,10 @@ import csv
 import os
 from wao.brain_config import BrainConfig
 
-coin = 'LTC'
-time_range = '1m'
-freqtrade_directory = BrainConfig.ROOT_DIRECTORY + BrainConfig.CHOP_TESTER_WORKSPACE + "/freqtrade/"
-json_file_name = f''+freqtrade_directory+'user_data/data/binance/{coin}_USDT-{time_range}.json'
+coin = 'ETH'
+time_range = '1h'
+freqtrade_directory = BrainConfig.ROOT_DIRECTORY + "/freqtrade/"
+json_file_name = f'{freqtrade_directory}user_data/data/binance/{coin}_USDT-{time_range}.json'
 json_file_content = Path(json_file_name).read_text()
 total_loop_time = json_file_content.count(']') - 1
 minutes_per_day = 1440 if time_range == '1m' else 288
