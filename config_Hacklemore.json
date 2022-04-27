@@ -33,9 +33,7 @@
         "ccxt_config": {},
         "ccxt_async_config": {},
         "pair_whitelist": [
-            "LTC/USDT",
-            "ADA/USDT",
-            "XLM/USDT"
+            "ADA/USDT"
         ],
         "pair_blacklist": [
             "BNB/.*"

@@ -8,15 +8,15 @@ import csv
 import os
 from wao.brain_config import BrainConfig
 
-coin = 'ETH'
-time_range = '1h'
+coin = 'ADA'
+time_range = '5m'
 freqtrade_directory = BrainConfig.ROOT_DIRECTORY + BrainConfig.CHOP_TESTER_WORKSPACE + "/freqtrade/"
 json_file_name = f'{freqtrade_directory}user_data/data/binance/{coin}_USDT-{time_range}.json'
 json_file_content = Path(json_file_name).read_text()
 total_loop_time = json_file_content.count(']') - 1
 minutes_per_day = 1440 if time_range == '1m' else 288
-brain_name = "Scalp"
-config_file_name = "config_scalp.json"
+brain_name = "Hacklemore"
+config_file_name = "config_Hacklemore.json"
 result_saved_directory = "wao/_scalping_results_directory/"
 file_format = ".csv"
 under_score = "_"
@@ -118,10 +118,10 @@ def parse_scalping_strategy_result() -> list:
     print("parse_scalping_strategy_result:... ")
     list_of_rows = []
     counter = 0
+    win_rate_percentage = run_scalping_strategy_command()  # running to get the win rate percentage for yearly data
+    win_rate_percentage_per_year = win_rate_percentage.split("|")[19].split()[3]
     while counter < total_loop_time:
         list_of_row_items = []
-        win_rate_percentage = run_scalping_strategy_command()  # running to get the win rate percentage for yearly data
-        win_rate_percentage_per_year = win_rate_percentage.split("|")[19].split()[3]
         write_to_json(counter)
         out_put_to_be_parsed = run_scalping_strategy_command()  # running to get the win rate percentage for daily data
         number_of_trades_per_day = out_put_to_be_parsed.split("|")[13].replace(" ", "")
