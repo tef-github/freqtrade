@@ -38,7 +38,7 @@ class bbrsi_scalp(WAOStrategy):
         trailing_stop_positive_offset = 0.345
         trailing_only_offset_is_reached = True
 
-    if super().coin == "XMR":
+    if WAOStrategy.coin == "XMR":
         # ROI table:
         minimal_roi = {
             "0": 0.249,
@@ -56,7 +56,7 @@ class bbrsi_scalp(WAOStrategy):
         trailing_stop_positive_offset = 0.11
         trailing_only_offset_is_reached = False
 
-    if super().coin == "XLM":
+    if WAOStrategy.coin == "XLM":
         # ROI table:
         minimal_roi = {
             "0": 0.22,
@@ -74,7 +74,7 @@ class bbrsi_scalp(WAOStrategy):
         trailing_stop_positive_offset = 0.385
         trailing_only_offset_is_reached = True
 
-    if super().coin == "LTC":
+    if WAOStrategy.coin == "LTC":
         # ROI table:
         minimal_roi = {
             "0": 0.249,
@@ -92,7 +92,7 @@ class bbrsi_scalp(WAOStrategy):
         trailing_stop_positive_offset = 0.362
         trailing_only_offset_is_reached = True
 
-    if super().coin == "XRP":
+    if WAOStrategy.coin == "XRP":
         # ROI table:
         minimal_roi = {
             "0": 0.169,
@@ -110,7 +110,7 @@ class bbrsi_scalp(WAOStrategy):
         trailing_stop_positive_offset = 0.255
         trailing_only_offset_is_reached = False
 
-    if super().coin == "ADA":
+    if WAOStrategy.coin == "ADA":
         minimal_roi = {
             "0": 0.226,
             "40": 0.054,
