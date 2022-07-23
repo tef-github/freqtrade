@@ -10,7 +10,6 @@ from wao.wao_strategy import WAOStrategy
 
 class bbrsi_scalp(WAOStrategy):
     brain = "Freq_bbrsi_scalp"
-    coin = ""
 
     def __init__(self, config: dict):
         super().__init__(config, self.brain, 8, 0.15)
@@ -18,10 +17,10 @@ class bbrsi_scalp(WAOStrategy):
 
     # Optimal timeframe for the strategy
     timeframe = '5m'
-    print("coin="+coin)
+    print("coin="+super().coin)
     # Minimal ROI designed for the strategy.
     # This attribute will be overridden if the config file contains "minimal_roi"
-    if coin == "BTC":
+    if super().coin == "BTC":
         # ROI table:
         minimal_roi = {
             "0": 0.266,
@@ -39,7 +38,7 @@ class bbrsi_scalp(WAOStrategy):
         trailing_stop_positive_offset = 0.345
         trailing_only_offset_is_reached = True
 
-    if coin == "XMR":
+    if super().coin == "XMR":
         # ROI table:
         minimal_roi = {
             "0": 0.249,
@@ -57,7 +56,7 @@ class bbrsi_scalp(WAOStrategy):
         trailing_stop_positive_offset = 0.11
         trailing_only_offset_is_reached = False
 
-    if coin == "XLM":
+    if super().coin == "XLM":
         # ROI table:
         minimal_roi = {
             "0": 0.22,
@@ -75,7 +74,7 @@ class bbrsi_scalp(WAOStrategy):
         trailing_stop_positive_offset = 0.385
         trailing_only_offset_is_reached = True
 
-    if coin == "LTC":
+    if super().coin == "LTC":
         # ROI table:
         minimal_roi = {
             "0": 0.249,
@@ -93,7 +92,7 @@ class bbrsi_scalp(WAOStrategy):
         trailing_stop_positive_offset = 0.362
         trailing_only_offset_is_reached = True
 
-    if coin == "XRP":
+    if super().coin == "XRP":
         # ROI table:
         minimal_roi = {
             "0": 0.169,
@@ -111,7 +110,7 @@ class bbrsi_scalp(WAOStrategy):
         trailing_stop_positive_offset = 0.255
         trailing_only_offset_is_reached = False
 
-    if coin == "ADA":
+    if super().coin == "ADA":
         minimal_roi = {
             "0": 0.226,
             "40": 0.054,
