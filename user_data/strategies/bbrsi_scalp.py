@@ -17,10 +17,10 @@ class bbrsi_scalp(WAOStrategy):
 
     # Optimal timeframe for the strategy
     timeframe = '5m'
-    print("coin="+str(super().coin))
+    print("coin="+str(WAOStrategy.coin))
     # Minimal ROI designed for the strategy.
     # This attribute will be overridden if the config file contains "minimal_roi"
-    if super().coin == "BTC":
+    if WAOStrategy.coin == "BTC":
         # ROI table:
         minimal_roi = {
             "0": 0.266,
