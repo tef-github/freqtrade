@@ -11,6 +11,7 @@ import pickle
 sys.path.append(BrainConfig.EXECUTION_PATH)
 from config import Config
 from romeo import Romeo, RomeoExitPriceType
+from romeo_v import RomeoV
 from backtest_signal import BacktestSignal
 
 
@@ -32,7 +33,7 @@ def perform_execute_buy(coin, brain, time_out_hours, dup):
     Config.ROMEO_SS_TIMEOUT_HOURS = time_out_hours
     Config.ROMEO_D_UP_PERCENTAGE = dup
 
-    romeo = Romeo.instance(is_test_mode, True)
+    romeo = RomeoV.instance(is_test_mode, True)
     BrainConfig.ROMEO_POOL[coin] = romeo
     romeo.start()
 
