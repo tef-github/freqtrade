@@ -3,18 +3,18 @@
 Main Freqtrade bot script.
 Read the documentation to know what cli arguments you need.
 """
-
-from freqtrade.exceptions import FreqtradeException, OperationalException
-import sys
-# check min. python version
-if sys.version_info < (3, 6):
-    sys.exit("Freqtrade requires Python version >= 3.6")
-
-# flake8: noqa E402
 import logging
+import sys
 from typing import Any, List
 
+
+# check min. python version
+if sys.version_info < (3, 8):  # pragma: no cover
+    sys.exit("Freqtrade requires Python version >= 3.8")
+
 from freqtrade.commands import Arguments
+from freqtrade.exceptions import FreqtradeException, OperationalException
+from freqtrade.loggers import setup_logging_pre
 
 
 logger = logging.getLogger('freqtrade')
@@ -28,6 +28,7 @@ def main(sysargv: List[str] = None) -> None:
 
     return_code: Any = 1
     try:
+        setup_logging_pre()
         arguments = Arguments(sysargv)
         args = arguments.get_parsed_arg()
 
@@ -43,9 +44,9 @@ def main(sysargv: List[str] = None) -> None:
                 "as `freqtrade trade [options...]`.\n"
                 "To see the full list of options available, please use "
                 "`freqtrade --help` or `freqtrade <command> --help`."
-                )
+            )
 
-    except SystemExit as e:
+    except SystemExit as e:  # pragma: no cover
         return_code = e
     except KeyboardInterrupt:
         logger.info('SIGINT received, aborting ...')
@@ -59,5 +60,5 @@ def main(sysargv: List[str] = None) -> None:
         sys.exit(return_code)
 
 
-if __name__ == '__main__':
+if __name__ == '__main__':  # pragma: no cover
     main()

@@ -1,22 +1,25 @@
 # pragma pylint: disable=missing-docstring, invalid-name, pointless-string-statement
+# flake8: noqa: F401
 
 # --- Do not remove these libs ---
 import numpy as np  # noqa
 import pandas as pd  # noqa
 from pandas import DataFrame
 
-from freqtrade.strategy.interface import IStrategy
+from freqtrade.strategy import (BooleanParameter, CategoricalParameter, DecimalParameter,
+                                IStrategy, IntParameter)
 
 # --------------------------------
 # Add your lib to import here
 import talib.abstract as ta
+import pandas_ta as pta
 import freqtrade.vendor.qtpylib.indicators as qtpylib
 
 
 class {{ strategy }}(IStrategy):
     """
     This is a strategy template to get you started.
-    More information in https://github.com/freqtrade/freqtrade/blob/develop/docs/bot-optimization.md
+    More information in https://www.freqtrade.io/en/latest/strategy-customization/
 
     You can:
         :return: a Dataframe with all mandatory indicators for the strategies
@@ -26,12 +29,16 @@ class {{ strategy }}(IStrategy):
 
     You must keep:
     - the lib in the section "Do not remove these libs"
-    - the prototype for the methods: minimal_roi, stoploss, populate_indicators, populate_buy_trend,
-    populate_sell_trend, hyperopt_space, buy_strategy_generator
+    - the methods: populate_indicators, populate_buy_trend, populate_sell_trend
+    You should keep:
+    - timeframe, minimal_roi, stoploss, trailing_*
     """
     # Strategy interface version - allow new iterations of the strategy interface.
     # Check the documentation or the Sample strategy to get the latest version.
     INTERFACE_VERSION = 2
+
+    # Optimal timeframe for the strategy.
+    timeframe = '5m'
 
     # Minimal ROI designed for the strategy.
     # This attribute will be overridden if the config file contains "minimal_roi".
@@ -51,9 +58,6 @@ class {{ strategy }}(IStrategy):
     # trailing_stop_positive = 0.01
     # trailing_stop_positive_offset = 0.0  # Disabled / not configured
 
-    # Optimal ticker interval for the strategy.
-    ticker_interval = '5m'
-
     # Run "populate_indicators()" only for new candle.
     process_only_new_candles = False
 
@@ -63,7 +67,11 @@ class {{ strategy }}(IStrategy):
     ignore_roi_if_buy_signal = False
 
     # Number of candles the strategy requires before producing valid signals
-    startup_candle_count: int = 20
+    startup_candle_count: int = 30
+
+    # Strategy parameters
+    buy_rsi = IntParameter(10, 40, default=30, space="buy")
+    sell_rsi = IntParameter(60, 90, default=70, space="sell")
 
     # Optional order type mapping.
     order_types = {
@@ -79,6 +87,7 @@ class {{ strategy }}(IStrategy):
         'sell': 'gtc'
     }
     {{ plot_config | indent(4) }}
+
     def informative_pairs(self):
         """
         Define additional, informative pair/interval combinations to be cached from the exchange.
@@ -137,3 +146,4 @@ class {{ strategy }}(IStrategy):
             ),
             'sell'] = 1
         return dataframe
+    {{ additional_methods | indent(4) }}

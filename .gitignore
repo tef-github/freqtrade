@@ -1,14 +1,20 @@
 # Freqtrade rules
-config*.json
+
 *.sqlite
+*.sqlite-shm
+*.sqlite-wal
 logfile.txt
-user_data/*
-!user_data/strategy/sample_strategy.py
-!user_data/notebooks
+user_data/backtest_results/*
+user_data/logs/*
 user_data/notebooks/*
-!user_data/notebooks/*example.ipynb
+user_data/data/*
 freqtrade-plot.html
 freqtrade-profit-plot.html
+freqtrade/rpc/api_server/ui/*
+ScreenLog*
+
+# Macos related
+.DS_Store
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
@@ -95,3 +101,8 @@ target/
 
 #exceptions
 !*.gitkeep
+!config_examples/config_binance.example.json
+!config_examples/config_bittrex.example.json
+!config_examples/config_ftx.example.json
+!config_examples/config_full.example.json
+!config_examples/config_kraken.example.json

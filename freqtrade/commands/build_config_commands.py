@@ -1,13 +1,17 @@
 import logging
+import secrets
 from pathlib import Path
-from typing import Any, Dict
+from typing import Any, Dict, List
 
 from questionary import Separator, prompt
 
+from freqtrade.configuration.directory_operations import chown_user_directory
 from freqtrade.constants import UNLIMITED_STAKE_AMOUNT
-from freqtrade.exchange import available_exchanges, MAP_EXCHANGE_CHILDCLASS
-from freqtrade.misc import render_template
 from freqtrade.exceptions import OperationalException
+from freqtrade.exchange import MAP_EXCHANGE_CHILDCLASS, available_exchanges
+from freqtrade.misc import render_template
+
+
 logger = logging.getLogger(__name__)
 
 
@@ -46,7 +50,7 @@ def ask_user_config() -> Dict[str, Any]:
     Interactive questions built using https://github.com/tmbo/questionary
     :returns: Dict with keys to put into template
     """
-    questions = [
+    questions: List[Dict[str, Any]] = [
         {
             "type": "confirm",
             "name": "dry_run",
@@ -57,27 +61,38 @@ def ask_user_config() -> Dict[str, Any]:
             "type": "text",
             "name": "stake_currency",
             "message": "Please insert your stake currency:",
-            "default": 'BTC',
+            "default": 'USDT',
         },
         {
             "type": "text",
             "name": "stake_amount",
-            "message": "Please insert your stake amount:",
-            "default": "0.01",
+            "message": f"Please insert your stake amount (Number or '{UNLIMITED_STAKE_AMOUNT}'):",
+            "default": "100",
             "validate": lambda val: val == UNLIMITED_STAKE_AMOUNT or validate_is_float(val),
+            "filter": lambda val: '"' + UNLIMITED_STAKE_AMOUNT + '"'
+            if val == UNLIMITED_STAKE_AMOUNT
+            else val
         },
         {
             "type": "text",
             "name": "max_open_trades",
-            "message": f"Please insert max_open_trades (Integer or '{UNLIMITED_STAKE_AMOUNT}'):",
+            "message": "Please insert max_open_trades (Integer or -1 for unlimited open trades):",
             "default": "3",
-            "validate": lambda val: val == UNLIMITED_STAKE_AMOUNT or validate_is_int(val)
+            "validate": lambda val: validate_is_int(val)
+        },
+        {
+            "type": "select",
+            "name": "timeframe_in_config",
+            "message": "Time",
+            "choices": ["Have the strategy define timeframe.", "Override in configuration."]
         },
         {
             "type": "text",
-            "name": "ticker_interval",
-            "message": "Please insert your timeframe (ticker interval):",
+            "name": "timeframe",
+            "message": "Please insert your desired timeframe (e.g. 5m):",
             "default": "5m",
+            "when": lambda x: x["timeframe_in_config"] == 'Override in configuration.'
+
         },
         {
             "type": "text",
@@ -91,10 +106,14 @@ def ask_user_config() -> Dict[str, Any]:
             "message": "Select exchange",
             "choices": [
                 "binance",
-                "binanceje",
                 "binanceus",
                 "bittrex",
+                "ftx",
+                "gateio",
+                "huobi",
                 "kraken",
+                "kucoin",
+                "okx",
                 Separator(),
                 "other",
             ],
@@ -119,6 +138,12 @@ def ask_user_config() -> Dict[str, Any]:
             "when": lambda x: not x['dry_run']
         },
         {
+            "type": "password",
+            "name": "exchange_key_password",
+            "message": "Insert Exchange API Key password",
+            "when": lambda x: not x['dry_run'] and x['exchange_name'] in ('kucoin', 'okx')
+        },
+        {
             "type": "confirm",
             "name": "telegram",
             "message": "Do you want to enable Telegram?",
@@ -136,12 +161,42 @@ def ask_user_config() -> Dict[str, Any]:
             "message": "Insert Telegram chat id",
             "when": lambda x: x['telegram']
         },
+        {
+            "type": "confirm",
+            "name": "api_server",
+            "message": "Do you want to enable the Rest API (includes FreqUI)?",
+            "default": False,
+        },
+        {
+            "type": "text",
+            "name": "api_server_listen_addr",
+            "message": ("Insert Api server Listen Address (0.0.0.0 for docker, "
+                        "otherwise best left untouched)"),
+            "default": "127.0.0.1",
+            "when": lambda x: x['api_server']
+        },
+        {
+            "type": "text",
+            "name": "api_server_username",
+            "message": "Insert api-server username",
+            "default": "freqtrader",
+            "when": lambda x: x['api_server']
+        },
+        {
+            "type": "text",
+            "name": "api_server_password",
+            "message": "Insert api-server password",
+            "when": lambda x: x['api_server']
+        },
     ]
     answers = prompt(questions)
 
     if not answers:
         # Interrupted questionary sessions return an empty dict.
         raise OperationalException("User interrupted interactive questions.")
+
+    # Force JWT token to be a random string
+    answers['api_server_jwt_key'] = secrets.token_hex()
 
     return answers
 
@@ -150,7 +205,7 @@ def deploy_new_config(config_path: Path, selections: Dict[str, Any]) -> None:
     """
     Applies selections to the template and writes the result to config_path
     :param config_path: Path object for new config file. Should not exist yet
-    :param selecions: Dict containing selections taken by the user.
+    :param selections: Dict containing selections taken by the user.
     """
     from jinja2.exceptions import TemplateNotFound
     try:
@@ -160,10 +215,10 @@ def deploy_new_config(config_path: Path, selections: Dict[str, Any]) -> None:
         selections['exchange'] = render_template(
             templatefile=f"subtemplates/exchange_{exchange_template}.j2",
             arguments=selections
-            )
+        )
     except TemplateNotFound:
         selections['exchange'] = render_template(
-            templatefile=f"subtemplates/exchange_generic.j2",
+            templatefile="subtemplates/exchange_generic.j2",
             arguments=selections
         )
 
@@ -171,16 +226,20 @@ def deploy_new_config(config_path: Path, selections: Dict[str, Any]) -> None:
                                   arguments=selections)
 
     logger.info(f"Writing config to `{config_path}`.")
+    logger.info(
+        "Please make sure to check the configuration contents and adjust settings to your needs.")
+
     config_path.write_text(config_text)
 
 
 def start_new_config(args: Dict[str, Any]) -> None:
     """
     Create a new strategy from a template
-    Asking the user questions to fill out the templateaccordingly.
+    Asking the user questions to fill out the template accordingly.
     """
 
     config_path = Path(args['config'][0])
+    chown_user_directory(config_path.parent)
     if config_path.exists():
         overwrite = ask_user_overwrite(config_path)
         if overwrite:

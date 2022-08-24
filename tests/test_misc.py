@@ -6,32 +6,40 @@ from unittest.mock import MagicMock
 
 import pytest
 
-from freqtrade.data.converter import ohlcv_to_dataframe
-from freqtrade.misc import (datesarray_to_datetimearray, file_dump_json,
-                            file_load_json, format_ms_time, pair_to_filename,
-                            plural, shorten_date)
+from freqtrade.misc import (decimals_per_coin, file_dump_json, file_load_json, format_ms_time,
+                            pair_to_filename, parse_db_uri_for_logging, plural, render_template,
+                            render_template_with_fallback, round_coin_value, safe_value_fallback,
+                            safe_value_fallback2, shorten_date)
+
+
+def test_decimals_per_coin():
+    assert decimals_per_coin('USDT') == 3
+    assert decimals_per_coin('EUR') == 3
+    assert decimals_per_coin('BTC') == 8
+    assert decimals_per_coin('ETH') == 5
+
+
+def test_round_coin_value():
+    assert round_coin_value(222.222222, 'USDT') == '222.222 USDT'
+    assert round_coin_value(222.2, 'USDT', keep_trailing_zeros=True) == '222.200 USDT'
+    assert round_coin_value(222.2, 'USDT') == '222.2 USDT'
+    assert round_coin_value(222.12745, 'EUR') == '222.127 EUR'
+    assert round_coin_value(0.1274512123, 'BTC') == '0.12745121 BTC'
+    assert round_coin_value(0.1274512123, 'ETH') == '0.12745 ETH'
+
+    assert round_coin_value(222.222222, 'USDT', False) == '222.222'
+    assert round_coin_value(222.2, 'USDT', False) == '222.2'
+    assert round_coin_value(222.00, 'USDT', False) == '222'
+    assert round_coin_value(222.12745, 'EUR', False) == '222.127'
+    assert round_coin_value(0.1274512123, 'BTC', False) == '0.12745121'
+    assert round_coin_value(0.1274512123, 'ETH', False) == '0.12745'
+    assert round_coin_value(222.2, 'USDT', False, True) == '222.200'
 
 
 def test_shorten_date() -> None:
     str_data = '1 day, 2 hours, 3 minutes, 4 seconds ago'
     str_shorten_data = '1 d, 2 h, 3 min, 4 sec ago'
     assert shorten_date(str_data) == str_shorten_data
-
-
-def test_datesarray_to_datetimearray(ohlcv_history_list):
-    dataframes = ohlcv_to_dataframe(ohlcv_history_list, "5m", pair="UNITTEST/BTC",
-                                    fill_missing=True)
-    dates = datesarray_to_datetimearray(dataframes['date'])
-
-    assert isinstance(dates[0], datetime.datetime)
-    assert dates[0].year == 2017
-    assert dates[0].month == 11
-    assert dates[0].day == 26
-    assert dates[0].hour == 8
-    assert dates[0].minute == 50
-
-    date_len = len(dates)
-    assert date_len == 2
 
 
 def test_file_dump_json(mocker) -> None:
@@ -62,6 +70,9 @@ def test_file_load_json(mocker, testdatadir) -> None:
 
 @pytest.mark.parametrize("pair,expected_result", [
     ("ETH/BTC", 'ETH_BTC'),
+    ("ETH/USDT", 'ETH_USDT'),
+    ("ETH/USDT:USDT", 'ETH_USDT_USDT'),  # swap with USDT as settlement currency
+    ("ETH/USDT:USDT-210625", 'ETH_USDT_USDT_210625'),  # expiring futures
     ("Fabric Token/ETH", 'Fabric_Token_ETH'),
     ("ETHH20", 'ETHH20'),
     (".XBTBON2H", '_XBTBON2H'),
@@ -91,6 +102,43 @@ def test_format_ms_time() -> None:
     # Date 2017-12-13 08:02:01
     date_in_epoch_ms = 1513152121000
     assert format_ms_time(date_in_epoch_ms) == res.astimezone(None).strftime('%Y-%m-%dT%H:%M:%S')
+
+
+def test_safe_value_fallback():
+    dict1 = {'keya': None, 'keyb': 2, 'keyc': 5, 'keyd': None}
+    assert safe_value_fallback(dict1, 'keya', 'keyb') == 2
+    assert safe_value_fallback(dict1, 'keyb', 'keya') == 2
+
+    assert safe_value_fallback(dict1, 'keyb', 'keyc') == 2
+    assert safe_value_fallback(dict1, 'keya', 'keyc') == 5
+
+    assert safe_value_fallback(dict1, 'keyc', 'keyb') == 5
+
+    assert safe_value_fallback(dict1, 'keya', 'keyd') is None
+
+    assert safe_value_fallback(dict1, 'keyNo', 'keyNo') is None
+    assert safe_value_fallback(dict1, 'keyNo', 'keyNo', 55) == 55
+
+
+def test_safe_value_fallback2():
+    dict1 = {'keya': None, 'keyb': 2, 'keyc': 5, 'keyd': None}
+    dict2 = {'keya': 20, 'keyb': None, 'keyc': 6, 'keyd': None}
+    assert safe_value_fallback2(dict1, dict2, 'keya', 'keya') == 20
+    assert safe_value_fallback2(dict2, dict1, 'keya', 'keya') == 20
+
+    assert safe_value_fallback2(dict1, dict2, 'keyb', 'keyb') == 2
+    assert safe_value_fallback2(dict2, dict1, 'keyb', 'keyb') == 2
+
+    assert safe_value_fallback2(dict1, dict2, 'keyc', 'keyc') == 5
+    assert safe_value_fallback2(dict2, dict1, 'keyc', 'keyc') == 6
+
+    assert safe_value_fallback2(dict1, dict2, 'keyd', 'keyd') is None
+    assert safe_value_fallback2(dict2, dict1, 'keyd', 'keyd') is None
+    assert safe_value_fallback2(dict2, dict1, 'keyd', 'keyd', 1234) == 1234
+
+    assert safe_value_fallback2(dict1, dict2, 'keyNo', 'keyNo') is None
+    assert safe_value_fallback2(dict2, dict1, 'keyNo', 'keyNo') is None
+    assert safe_value_fallback2(dict2, dict1, 'keyNo', 'keyNo', 1234) == 1234
 
 
 def test_plural() -> None:
@@ -123,3 +171,34 @@ def test_plural() -> None:
     assert plural(1.5, "ox", "oxen") == "oxen"
     assert plural(-0.5, "ox", "oxen") == "oxen"
     assert plural(-1.5, "ox", "oxen") == "oxen"
+
+
+def test_render_template_fallback(mocker):
+    from jinja2.exceptions import TemplateNotFound
+    with pytest.raises(TemplateNotFound):
+        val = render_template(
+            templatefile='subtemplates/indicators_does-not-exist.j2',)
+
+    val = render_template_with_fallback(
+        templatefile='subtemplates/indicators_does-not-exist.j2',
+        templatefallbackfile='subtemplates/indicators_minimal.j2',
+    )
+    assert isinstance(val, str)
+    assert 'if self.dp' in val
+
+
+@pytest.mark.parametrize('conn_url,expected', [
+    ("postgresql+psycopg2://scott123:scott123@host:1245/dbname",
+     "postgresql+psycopg2://scott123:*****@host:1245/dbname"),
+    ("postgresql+psycopg2://scott123:scott123@host.name.com/dbname",
+     "postgresql+psycopg2://scott123:*****@host.name.com/dbname"),
+    ("mariadb+mariadbconnector://app_user:Password123!@127.0.0.1:3306/company",
+     "mariadb+mariadbconnector://app_user:*****@127.0.0.1:3306/company"),
+    ("mysql+pymysql://user:pass@some_mariadb/dbname?charset=utf8mb4",
+     "mysql+pymysql://user:*****@some_mariadb/dbname?charset=utf8mb4"),
+    ("sqlite:////freqtrade/user_data/tradesv3.sqlite",
+     "sqlite:////freqtrade/user_data/tradesv3.sqlite"),
+])
+def test_parse_db_uri_for_logging(conn_url, expected) -> None:
+
+    assert parse_db_uri_for_logging(conn_url) == expected
