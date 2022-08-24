@@ -26,6 +26,9 @@ Alternatively (e.g. if your system is not supported by the setup.sh script), fol
 
 This will install all required tools for development, including `pytest`, `flake8`, `mypy`, and `coveralls`.
 
+Then install the git hook scripts by running `pre-commit install`, so your changes will be verified locally before committing.
+This avoids a lot of waiting for CI already, as some basic formatting checks are done locally on your machine.
+
 Before opening a pull request, please familiarize yourself with our [Contributing Guidelines](https://github.com/freqtrade/freqtrade/blob/develop/CONTRIBUTING.md).
 
 ### Devcontainer setup
@@ -64,6 +67,36 @@ def test_method_to_test(caplog):
     assert log_has_re(r"This dynamic event happened and produced \d+", caplog)
 
 ```
+
+### Debug configuration
+
+To debug freqtrade, we recommend VSCode with the following launch configuration (located in `.vscode/launch.json`).
+Details will obviously vary between setups - but this should work to get you started.
+
+``` json
+{
+    "name": "freqtrade trade",
+    "type": "python",
+    "request": "launch",
+    "module": "freqtrade",
+    "console": "integratedTerminal",
+    "args": [
+        "trade",
+        // Optional:
+        // "--userdir", "user_data",
+        "--strategy", 
+        "MyAwesomeStrategy",
+    ]
+},
+```
+
+Command line arguments can be added in the `"args"` array.
+This method can also be used to debug a strategy, by setting the breakpoints within the strategy.
+
+A similar setup can also be taken for Pycharm - using `freqtrade` as module name, and setting the command line arguments as "parameters".
+
+!!! Note "Startup directory"
+    This assumes that you have the repository checked out, and the editor is started at the repository root level (so setup.py is at the top level of your repository).
 
 ## ErrorHandling
 
@@ -197,11 +230,12 @@ For that reason, they must implement the following methods:
 * `global_stop()`
 * `stop_per_pair()`.
 
-`global_stop()` and `stop_per_pair()` must return a ProtectionReturn tuple, which consists of:
+`global_stop()` and `stop_per_pair()` must return a ProtectionReturn object, which consists of:
 
 * lock pair - boolean
 * lock until - datetime - until when should the pair be locked (will be rounded up to the next new candle)
 * reason - string, used for logging and storage in the database
+* lock_side - long, short or '*'.
 
 The `until` portion should be calculated using the provided `calculate_lock_end()` method.
 
@@ -220,13 +254,13 @@ Protections can have 2 different ways to stop trading for a limited :
 ##### Protections - per pair
 
 Protections that implement the per pair approach must set `has_local_stop=True`.
-The method `stop_per_pair()` will be called whenever a trade closed (sell order completed).
+The method `stop_per_pair()` will be called whenever a trade closed (exit order completed).
 
 ##### Protections - global protection
 
 These Protections should do their evaluation across all pairs, and consequently will also lock all pairs from trading (called a global PairLock).
 Global protection must set `has_global_stop=True` to be evaluated for global stops.
-The method `global_stop()` will be called whenever a trade closed (sell order completed).
+The method `global_stop()` will be called whenever a trade closed (exit order completed).
 
 ##### Protections - calculating lock end time
 
@@ -264,7 +298,7 @@ Additional tests / steps to complete:
 * Check if balance shows correctly (*)
 * Create market order (*)
 * Create limit order (*)
-* Complete trade (buy + sell) (*)
+* Complete trade (enter + exit) (*)
   * Compare result calculation between exchange and bot
   * Ensure fees are applied correctly (check the database against the exchange)
 
@@ -309,6 +343,32 @@ print(datetime.utcnow())
 The output will show the last entry from the Exchange as well as the current UTC date.
 If the day shows the same day, then the last candle can be assumed as incomplete and should be dropped (leave the setting `"ohlcv_partial_candle"` from the exchange-class untouched / True). Otherwise, set `"ohlcv_partial_candle"` to `False` to not drop Candles (shown in the example above).
 Another way is to run this command multiple times in a row and observe if the volume is changing (while the date remains the same).
+
+### Update binance cached leverage tiers
+
+Updating leveraged tiers should be done regularly - and requires an authenticated account with futures enabled.
+
+``` python
+import ccxt
+import json
+from pathlib import Path
+
+exchange = ccxt.binance({
+    'apiKey': '<apikey>',
+    'secret': '<secret>'
+    'options': {'defaultType': 'future'}
+    })
+_ = exchange.load_markets()
+
+lev_tiers = exchange.fetch_leverage_tiers()
+
+# Assumes this is running in the root of the repository.
+file = Path('freqtrade/exchange/binance_leverage_tiers.json')
+json.dump(dict(sorted(lev_tiers.items())), file.open('w'), indent=2)
+
+```
+
+This file should then be contributed upstream, so others can benefit from this, too.
 
 ## Updating example notebooks
 

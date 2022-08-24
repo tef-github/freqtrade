@@ -9,10 +9,6 @@ Freqtrade is a free and open source crypto trading bot written in Python. It is 
 
 ![freqtrade](https://raw.githubusercontent.com/freqtrade/freqtrade/develop/docs/assets/freqtrade-screenshot.png)
 
-## Sponsored promotion
-
-[![tokenbot-promo](https://raw.githubusercontent.com/freqtrade/freqtrade/develop/docs/assets/TokenBot-Freqtrade-banner.png)](https://tokenbot.com/?utm_source=github&utm_medium=freqtrade&utm_campaign=algodevs)
-
 ## Disclaimer
 
 This software is for educational purposes only. Do not risk money which
@@ -39,6 +35,14 @@ Please read the [exchange specific notes](docs/exchanges.md) to learn about even
 - [X] [OKX](https://okx.com/) (Former OKEX)
 - [ ] [potentially many others](https://github.com/ccxt/ccxt/). _(We cannot guarantee they will work)_
 
+### Supported Futures Exchanges (experimental)
+
+- [X] [Binance](https://www.binance.com/)
+- [X] [Gate.io](https://www.gate.io/ref/6266643)
+- [X] [OKX](https://okx.com/).
+
+Please make sure to read the [exchange specific notes](docs/exchanges.md), as well as the [trading with leverage](docs/leverage.md) documentation before diving in.
+
 ### Community tested
 
 Exchanges confirmed working by the community:
@@ -59,6 +63,7 @@ Please find the complete documentation on the [freqtrade website](https://www.fr
 - [x] **Dry-run**: Run the bot without paying money.
 - [x] **Backtesting**: Run a simulation of your buy/sell strategy.
 - [x] **Strategy Optimization by machine learning**: Use machine learning to optimize your buy/sell strategy parameters with real exchange data.
+- [X] **Adaptive prediction modeling**: Build a smart strategy with FreqAI that self-trains to the market via adaptive machine learning methods. [Learn more](https://www.freqtrade.io/en/stable/freqai/)
 - [x] **Edge position sizing** Calculate your win rate, risk reward ratio, the best stoploss and adjust your position size before taking a position for each specific market. [Learn more](https://www.freqtrade.io/en/stable/edge/).
 - [x] **Whitelist crypto-currencies**: Select which crypto-currency you want to trade or use dynamic whitelists.
 - [x] **Blacklist crypto-currencies**: Select which crypto-currency you want to avoid.
@@ -128,7 +133,8 @@ Telegram is not mandatory. However, this is a great way to control your bot. Mor
 - `/stopbuy`: Stop entering new trades.
 - `/status <trade_id>|[table]`: Lists all or specific open trades.
 - `/profit [<n>]`: Lists cumulative profit from all finished trades, over the last n days.
-- `/forcesell <trade_id>|all`: Instantly sells the given trade (Ignoring `minimum_roi`).
+- `/forceexit <trade_id>|all`: Instantly exits the given trade (Ignoring `minimum_roi`).
+- `/fx <trade_id>|all`: Alias to `/forceexit`
 - `/performance`: Show performance of each finished trade grouped by pair
 - `/balance`: Show account balance per currency.
 - `/daily <n>`: Shows profit or loss per day, over the last n days.
@@ -188,7 +194,7 @@ Issues labeled [good first issue](https://github.com/freqtrade/freqtrade/labels/
 
 The clock must be accurate, synchronized to a NTP server very frequently to avoid problems with communication to the exchanges.
 
-### Min hardware required
+### Minimum hardware required
 
 To run this bot we recommend you a cloud instance with a minimum of:
 

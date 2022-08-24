@@ -9,6 +9,7 @@ dependencies:
     - pandas
     - pip
 
+    - py-find-1st
     - aiohttp
     - SQLAlchemy
     - python-telegram-bot
@@ -30,7 +31,9 @@ dependencies:
     - colorama
     - questionary
     - prompt-toolkit
+    - schedule
     - python-dateutil
+    - joblib
 
 
     # ============================
@@ -53,7 +56,6 @@ dependencies:
     - scikit-learn
     - filelock
     - scikit-optimize
-    - joblib
     - progressbar2
     # ============================
     # 4/4 req plot
@@ -63,7 +65,7 @@ dependencies:
 
     - pip:
         - pycoingecko
-        - py_find_1st
+        # - py_find_1st
         - tables
         - pytest-random-order
         - ccxt
