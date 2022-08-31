@@ -15,7 +15,7 @@ class bbrsi_scalp(WAOStrategy):
         self.coin = str(config.get('pairs')[0]).split('/')[0]
         if self.coin == 'BTC' or self.coin == 'ADA':
             self.brain = "Freq_bbrsi_scalp_ada_btc"
-        super().__init__(config, self.brain, 8, 0.15)
+        super().__init__(config, self.brain, 100, 0.15)
 
     # Minimal ROI designed for the strategy.
     # This attribute will be overridden if the config file contains "minimal_roi"
