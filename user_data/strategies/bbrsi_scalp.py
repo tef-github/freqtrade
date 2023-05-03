@@ -21,19 +21,11 @@ class bbrsi_scalp(WAOStrategy):
     timeframe = '5m'
 
     minimal_roi = {
-        "240": 0.005,  # Exit after 500 minutes there is at least 0.5% profit
-        "220": 0.006,  # Exit after 500 minutes there is at least 0.5% profit
-        "200": 0.007,  # Exit after 40 minutes if there is at least 1% profit
-        "180": 0.008,  # Exit after 40 minutes if there is at least 1% profit
-        "160": 0.009,  # Exit after 40 minutes if there is at least 1% profit
-        "140": 0.010,  # Exit after 20 minutes if there is at least 1.5% profit
-        "120": 0.011,  # Exit after 20 minutes if there is at least 1.5% profit
-        "100": 0.012,  # Exit after 20 minutes if there is at least 1.5% profit
-        "80": 0.013,  # Exit after 20 minutes if there is at least 1.5% profit
-        "60": 0.014,  # Exit immediately if there is at least 2% profit
-        "40": 0.016,  # Exit immediately if there is at least 2% profit
-        "20": 0.018,  # Exit immediately if there is at least 2% profit
-        "0": 0.020,  # Exit immediately if there is at least 2% profit
+        # "240": 0.005,  # Exit after 500 minutes there is at least 0.5% profit
+        "0": 0.0168,
+        "34": 0.0056,
+        "88": 0.0031,
+        "105": 0
     }
 
     # Stoploss:
