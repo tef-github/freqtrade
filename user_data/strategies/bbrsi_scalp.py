@@ -25,7 +25,7 @@ class bbrsi_scalp(WAOStrategy):
         "0": 0.0168,
         "34": 0.0056,
         "88": 0.0031,
-        "105": 0
+        "105": 0.0
     }
 
     # Stoploss:
