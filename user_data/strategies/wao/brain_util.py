@@ -35,11 +35,11 @@ def perform_execute_buy(coin, dup, execution_index):
     romeo.start(execution_index)
 
 
-def perform_execute_sell(coin):
+def perform_execute_sell(coin, sell_reason):
     if Config.IS_SS_ENABLED:
         romeo = BrainConfig.ROMEO_POOL.get(coin)
         if romeo is not None:
-            romeo.perform_sell_signal(RomeoExitPriceType.SS)
+            romeo.perform_sell_signal(RomeoExitPriceType.SS, sell_reason=sell_reason)
 
 
 def perform_create_429_watcher():

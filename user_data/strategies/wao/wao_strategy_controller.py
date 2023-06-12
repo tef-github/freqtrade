@@ -33,7 +33,7 @@ class WAOStrategyController:
               ", brain=" + str(BrainConfig.BRAIN))
 
         if is_romeo_alive(coin):
-            print("WAOStrategyController: on_buy_signal: warning: alive romeo detected: ignoring buy_signal!")
+            print("WAOStrategyController: on_buy_signal: warning: alive system detected: ignoring buy_signal!")
             return
 
         if BrainConfig.IS_BACKTEST:
@@ -46,13 +46,13 @@ class WAOStrategyController:
             current_time) + ", coin=" + str(coin) + ", brain=" + str(BrainConfig.BRAIN))
 
         if not is_romeo_alive(coin):
-            print("WAOStrategyController: on_sell_signal: warning: romeo not alive: empty pool: ignoring sell_signal!")
+            print("WAOStrategyController: on_sell_signal: warning: system not alive: empty pool: ignoring sell_signal!")
             return
 
         if BrainConfig.IS_BACKTEST:
             write_to_backtest_table(current_time, coin, self.dup, "sell")
         else:
-            perform_execute_sell(coin)
+            perform_execute_sell(coin, sell_reason)
             remove_from_pool(coin)
 
     def __buy_execute(self, coin):
