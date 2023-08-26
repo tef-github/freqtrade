@@ -2,9 +2,9 @@ import subprocess
 import sys
 
 from execution.config import Config
-from execution.broker.binance_future_ccxt_broker import Binance_Future_Ccxt_broker
-from execution.broker.binance_spot_broker import Binance_Spot_Broker
-from execution.notifier import Notifier
+from broker.binance_future_ccxt_broker import Binance_Future_Ccxt_broker
+from broker.binance_spot_broker import Binance_Spot_Broker
+from notifier import Notifier
 
 if len(sys.argv) != 5:
     exit("""Incorrect number of arguments. 
