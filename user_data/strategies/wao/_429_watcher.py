@@ -4,7 +4,7 @@ import watchdog.observers
 import os
 from pathlib import Path
 from wao.brain_config import BrainConfig
-from execution.notifier import Notifier
+from commons.notifier import Notifier
 
 
 class _429_Watcher(watchdog.events.PatternMatchingEventHandler):

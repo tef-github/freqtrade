@@ -10,7 +10,7 @@ import pickle
 from execution.config import Config
 from execution.romeo import Romeo
 from execution.system_core import RomeoExitPriceType
-from execution.backtest_signal import BacktestSignal
+from commons.backtest_signal import BacktestSignal
 
 
 def write_to_backtest_table(timestamp, coin, dup, type):

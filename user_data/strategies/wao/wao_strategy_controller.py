@@ -3,7 +3,7 @@ import threading
 from wao.brain_config import BrainConfig
 from wao.brain_util import create_watchers
 from execution.config import Config
-from execution.notifier import Notifier
+from commons.notifier import Notifier
 
 
 class WAOStrategyController:
