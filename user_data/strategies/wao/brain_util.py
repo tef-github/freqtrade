@@ -8,7 +8,7 @@ from wao.error_watcher import Error_Watcher
 import pickle
 
 from execution.config import Config
-from execution.romeo import Romeo
+from execution.system import System
 from execution.system_core import RomeoExitPriceType
 from commons.backtest_signal import BacktestSignal
 
@@ -30,16 +30,16 @@ def perform_execute_buy(coin, dup, execution_index):
     Config.COIN = coin
     Config.ROMEO_D_UP_PERCENTAGE = dup
 
-    romeo = Romeo.instance(is_test_mode, True)
-    BrainConfig.ROMEO_POOL[coin] = romeo
-    romeo.start(execution_index)
+    system = System.instance(is_test_mode, True)
+    BrainConfig.ROMEO_POOL[coin] = system
+    system.start(execution_index)
 
 
 def perform_execute_sell(coin, sell_reason):
     if Config.IS_SS_ENABLED:
-        romeo = BrainConfig.ROMEO_POOL.get(coin)
-        if romeo is not None:
-            romeo.perform_sell_signal(RomeoExitPriceType.SS, sell_reason=sell_reason)
+        system = BrainConfig.ROMEO_POOL.get(coin)
+        if system is not None:
+            system.perform_sell_signal(RomeoExitPriceType.SS, sell_reason=sell_reason)
 
 
 def perform_create_429_watcher():

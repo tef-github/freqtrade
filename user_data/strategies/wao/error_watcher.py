@@ -8,7 +8,7 @@ import time
 from wao.brain_config import BrainConfig
 
 from execution.config import Config
-from execution.romeo import Romeo
+from execution.system import System
 from execution.system_core import RomeoExitPriceType
 from commons.notifier import Notifier
 
@@ -36,15 +36,15 @@ def stop_bot(error_line):
 
 
 def smooth_system_restart(error_line, notifier):
-    romeo = BrainConfig.ROMEO_POOL.get(Config.COIN)
-    is_system_alive = romeo is not None
+    system = BrainConfig.ROMEO_POOL.get(Config.COIN)
+    is_system_alive = system is not None
     error_line = "[REPORT TO TRELLO] " + error_line
     error_line += ("[SENDING SS]" if is_system_alive else " [POOL EMPTY. NO SYSTEM INSTANCE FOUND]")
     print("smooth_system_restart: is_system_alive="+str(is_system_alive))
     if is_system_alive:
-        romeo.is_error = True
-        romeo.perform_sell_signal(RomeoExitPriceType.SS)
-        romeo.send_error_report(error_line)  # send_to_trello_and_telegram
+        system.is_error = True
+        system.perform_sell_signal(RomeoExitPriceType.SS)
+        system.send_error_report(error_line)  # send_to_trello_and_telegram
     else:
         send_to_trello_and_telegram(title=error_line, description=error_line, notifier=notifier)
 
