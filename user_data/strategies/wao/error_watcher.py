@@ -36,7 +36,7 @@ def stop_bot(error_line):
 
 
 def smooth_system_restart(error_line, notifier):
-    system = BrainConfig.ROMEO_POOL.get(Config.COIN)
+    system = BrainConfig.SYSTEM_POOL.get(Config.COIN)
     is_system_alive = system is not None
     error_line = "[REPORT TO TRELLO] " + error_line
     error_line += ("[SENDING SS]" if is_system_alive else " [POOL EMPTY. NO SYSTEM INSTANCE FOUND]")

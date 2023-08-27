@@ -8,7 +8,7 @@ class BrainConfig:
     BACKTEST_DATA_CLEANER_MONTH_INDEX = 4
     IS_BACKTEST = False
     IS_ERROR_WATCHER_ENABLED = True
-    ROMEO_POOL = {}  # romeo_pool: key=coin, value=romeo_instance
+    SYSTEM_POOL = {}  # romeo_pool: key=coin, value=romeo_instance
     WORKSPACE_BACKTEST = "/workspace2"
     WORKSPACE_NORMAL = "/workspace"
     WORKSPACE = WORKSPACE_BACKTEST if IS_BACKTEST else WORKSPACE_NORMAL

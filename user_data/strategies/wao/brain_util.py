@@ -16,7 +16,7 @@ from commons.backtest_signal import BacktestSignal
 def write_to_backtest_table(timestamp, coin, dup, type):
     print("STEP [1]++++++++++++++++++++++++++++++++++++" + ", write_to_backtest_table")
     BrainConfig.BACKTEST_SIGNAL_LIST.append(BacktestSignal(BrainConfig.BRAIN, coin, type,
-                                                           Config.ROMEO_SS_TIMEOUT_HOURS, dup, timestamp=timestamp))
+                                                           Config.SYSTEM_SS_TIMEOUT_HOURS, dup, timestamp=timestamp))
     pickle.dump(BrainConfig.BACKTEST_SIGNAL_LIST, open(BrainConfig.BACKTEST_SIGNAL_LIST_PICKLE_FILE_PATH, 'wb'))
 
 
@@ -28,16 +28,16 @@ def perform_execute_buy(coin, dup, execution_index):
         is_test_mode = False
 
     Config.COIN = coin
-    Config.ROMEO_D_UP_PERCENTAGE = dup
+    Config.SYSTEM_D_UP_PERCENTAGE = dup
 
     system = System.instance(is_test_mode, True)
-    BrainConfig.ROMEO_POOL[coin] = system
+    BrainConfig.SYSTEM_POOL[coin] = system
     system.start(execution_index)
 
 
 def perform_execute_sell(coin, sell_reason):
     if Config.IS_SS_ENABLED:
-        system = BrainConfig.ROMEO_POOL.get(coin)
+        system = BrainConfig.SYSTEM_POOL.get(coin)
         if system is not None:
             system.perform_sell_signal(RomeoExitPriceType.SS, sell_reason=sell_reason)
 
@@ -121,9 +121,9 @@ def delete_backtest_table_file():
 
 
 def is_romeo_alive(coin):
-    return BrainConfig.ROMEO_POOL.get(coin) is not None
+    return BrainConfig.SYSTEM_POOL.get(coin) is not None
 
 
 def remove_from_pool(coin):
     if is_romeo_alive(coin):
-        del BrainConfig.ROMEO_POOL[coin]
+        del BrainConfig.SYSTEM_POOL[coin]

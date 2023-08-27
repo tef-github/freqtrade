@@ -10,13 +10,13 @@ class WAOStrategyController:
 
     def __init__(self, time_out_hours, dup):
         Config.BRAIN = BrainConfig.BRAIN
-        Config.ROMEO_SS_TIMEOUT_HOURS = time_out_hours
+        Config.SYSTEM_SS_TIMEOUT_HOURS = time_out_hours
         self.dup = dup
         self.notifier = Notifier(BrainConfig.MODE)
         self.execution_index = 0
         print("WAOStrategyController: __init__: is_backtest=" + str(BrainConfig.IS_BACKTEST) +
               ", system.version=" + str(Config.VERSION) + ", brain=" + Config.BRAIN +
-              ", system_ss_timeout_hour=" + str(Config.ROMEO_SS_TIMEOUT_HOURS))
+              ", system_ss_timeout_hour=" + str(Config.SYSTEM_SS_TIMEOUT_HOURS))
         create_watchers(self.notifier)
         clear_cumulative_value()
         create_initial_account_balance_binance_file()
