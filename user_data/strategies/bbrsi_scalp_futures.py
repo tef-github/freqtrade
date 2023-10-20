@@ -22,10 +22,7 @@ class bbrsi_scalp_futures(WAOStrategy_futures):
     timeframe = '5m'
 
     minimal_roi = {
-        "0": 0.249,
-        "30": 0.075,
-        "90": 0.022,
-        "209": 0
+        "0": 100
     }
 
     # Stoploss:
