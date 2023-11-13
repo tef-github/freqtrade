@@ -18,9 +18,16 @@ def is_freqtrade_error(error_line):
     return "freqtrade" in lower_string and ("warning" in lower_string or "error" in lower_string)
 
 
+def is_internal_server_error(error_line):
+    lower_string = error_line.lower()
+    return "internal server error" in lower_string
+
+
 def is_timed_out_error(error_line):
     lower_string = error_line.lower()
-    return "connection timed out" in lower_string or "read timed out" in lower_string or "internal error; unable to process your request" in lower_string
+    return "connection timed out" in lower_string or "read timed out" in lower_string or \
+        "internal error; unable to process your request" in lower_string or \
+        "connection to remote host was lost" in lower_string
 
 
 def stop_bot(error_line):
@@ -40,7 +47,7 @@ def smooth_system_restart(error_line, notifier):
     is_system_alive = system is not None
     error_line = "[REPORT TO TRELLO] " + error_line
     error_line += ("[SENDING SS]" if is_system_alive else " [POOL EMPTY. NO SYSTEM INSTANCE FOUND]")
-    print("smooth_system_restart: is_system_alive="+str(is_system_alive))
+    print("smooth_system_restart: is_system_alive=" + str(is_system_alive))
     if is_system_alive:
         system.is_error = True
         system.perform_sell_signal(RomeoExitPriceType.SS)
@@ -66,14 +73,16 @@ def get_tail_cmd_result(file_name):
 def check_error_condition(file_name, notifier):
     error_line = get_error_line(file_name)
 
-    if error_line is not None and not is_freqtrade_error(error_line) and not is_timed_out_error(error_line):
+    if error_line is not None and not is_freqtrade_error(error_line) and not is_timed_out_error(error_line) and \
+            not is_internal_server_error(error_line):
         is_error_watcher_throttle_hit = time.time() - BrainConfig.PREVIOUS_ERROR_TIMESTAMP_SECONDS > 3
 
         if BrainConfig.IS_SMOOTH_ERROR_HANDLING_ENABLED and is_error_watcher_throttle_hit:
             smooth_system_restart(error_line, notifier)
         else:
             stop_bot(error_line)
-            send_to_trello(title="[STOPBOT] "+error_line, description="is_error_watcher_throttle_hit=" + str(is_error_watcher_throttle_hit) + " " + error_line)
+            send_to_trello(title="[STOPBOT] " + error_line, description="is_error_watcher_throttle_hit=" + str(
+                is_error_watcher_throttle_hit) + " " + error_line)
         BrainConfig.PREVIOUS_ERROR_TIMESTAMP_SECONDS = time.time()
 
 
@@ -113,13 +122,13 @@ class Error_Watcher(watchdog.events.PatternMatchingEventHandler):
     def __init__(self, notifier):
         watchdog.events.PatternMatchingEventHandler.__init__(self, ignore_directories=False, case_sensitive=False)
         self.notifier = notifier
-        
+
     def on_created(self, event):
         self.__check_error_condition(event)
 
     def on_modified(self, event):
         self.__check_error_condition(event)
-        
+
     def __check_error_condition(self, event):
         file_name = str(event.src_path)
         threading.Thread(target=check_error_condition, args=(file_name, self.notifier)).start()
