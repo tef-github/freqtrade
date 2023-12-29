@@ -23,7 +23,7 @@ class bb_scalp_15m_pure(IStrategy):
     }
 
     # Stoploss:
-    stoploss = -0.01
+    stoploss = -0.25
 
     # Trailing stop:
     trailing_stop = False
