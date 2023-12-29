@@ -9,11 +9,20 @@ from execution.keys import Keys
 def download_data():
     print("download_data:...")
     client = Client(Keys.BINANCE_API_KEY, Keys.BINANCE_API_SECRET)
+
+    current_month_index = Config.BACKTEST_MONTH_INDEX
+    next_month_index = Config.BACKTEST_MONTH_INDEX + 1
+    current_year_index = Config.BACKTEST_YEAR
+    next_year_index = Config.BACKTEST_YEAR
+    if current_month_index == 11:
+        next_month_index = 0
+        next_year_index += 1
+
     candlesticks = client.get_historical_klines(Config.COIN + Config.get_stable_coin(Config.COIN), Config.BACKTEST_TIME_FRAME,
-                                                str(Config.BACKTEST_MONTH_INDEX + 1) + " 1, " + str(
-                                                    Config.BACKTEST_YEAR),
-                                                str(Config.BACKTEST_MONTH_INDEX + 2) + " 1, " + str(
-                                                    Config.BACKTEST_YEAR))
+                                                str(current_month_index + 1) + " 1, " + str(
+                                                    current_year_index),
+                                                str(next_month_index + 1) + " 1, " + str(
+                                                    next_year_index))
     write_to_csv(candlesticks)
 
 
