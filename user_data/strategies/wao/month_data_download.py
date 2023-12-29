@@ -9,7 +9,7 @@ from execution.keys import Keys
 def download_data():
     print("download_data:...")
     client = Client(Keys.BINANCE_API_KEY, Keys.BINANCE_API_SECRET)
-    candlesticks = client.get_historical_klines(Config.COIN + Config.STABLE_COIN, Config.BACKTEST_TIME_FRAME,
+    candlesticks = client.get_historical_klines(Config.COIN + Config.get_stable_coin(Config.COIN), Config.BACKTEST_TIME_FRAME,
                                                 str(Config.BACKTEST_MONTH_INDEX + 1) + " 1, " + str(
                                                     Config.BACKTEST_YEAR),
                                                 str(Config.BACKTEST_MONTH_INDEX + 2) + " 1, " + str(
