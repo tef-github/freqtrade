@@ -13,20 +13,13 @@ from freqtrade.strategy import IStrategy
 class bb_scalp_15m_pure(IStrategy):
     timeframe = '15m'
 
-    # minimal_roi = {
-    #     "80": 0.006,  # Exit after 20 minutes if there is at least 1.5% profit
-    #     "70": 0.007,  # Exit after 20 minutes if there is at least 1.5% profit
-    #     "60": 0.008,  # Exit immediately if there is at least 2% profit
-    #     "40": 0.010,  # Exit immediately if there is at least 2% profit
-    #     "20": 0.014,  # Exit immediately if there is at least 2% profit
-    #     "0": 0.018,  # Exit immediately if there is at least 2% profit
-    # }
-
     minimal_roi = {
-        "60":  0.01,
-        "30":  0.03,
-        "20":  0.04,
-        "0":  0.05
+        "80": 0.006,  # Exit after 20 minutes if there is at least 1.5% profit
+        "70": 0.007,  # Exit after 20 minutes if there is at least 1.5% profit
+        "60": 0.008,  # Exit immediately if there is at least 2% profit
+        "40": 0.010,  # Exit immediately if there is at least 2% profit
+        "20": 0.014,  # Exit immediately if there is at least 2% profit
+        "0": 0.018,  # Exit immediately if there is at least 2% profit
     }
 
     # Stoploss:
