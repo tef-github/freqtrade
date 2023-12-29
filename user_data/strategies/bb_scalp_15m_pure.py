@@ -11,7 +11,7 @@ from freqtrade.strategy import IStrategy
 
 
 class bb_scalp_15m_pure(IStrategy):
-    timeframe = '15m'
+    timeframe = '5m'
 
     minimal_roi = {
         "80": 0.006,  # Exit after 20 minutes if there is at least 1.5% profit
