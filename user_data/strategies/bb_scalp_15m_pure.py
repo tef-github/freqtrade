@@ -21,6 +21,7 @@ class bb_scalp_15m_pure(IStrategy):
     #     "20": 0.014,  # Exit immediately if there is at least 2% profit
     #     "0": 0.018,  # Exit immediately if there is at least 2% profit
     # }
+    minimal_roi = { }
 
     # Stoploss:
     stoploss = -0.99
