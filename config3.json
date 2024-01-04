@@ -33,7 +33,7 @@
         "ccxt_config": {},
         "ccxt_async_config": {},
         "pair_whitelist": [
-           "XMR/USDT"
+           "BTC/USDT"
 	],
         "pair_blacklist": [
             "BNB/.*"
