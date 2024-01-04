@@ -113,7 +113,7 @@ class bb_scalp_15m_pure(IStrategy):
         """
         dataframe.loc[
             (
-                qtpylib.crossed_above(dataframe['close'], dataframe['bb_middleband'])
+                qtpylib.crossed_above(dataframe['close'], dataframe['bb_lowerband'])
                 # qtpylib.crossed_above(dataframe['close'], dataframe['bb_lowerband'])
                 # & (dataframe['rsi'] < 50)
                 # & (dataframe['ema_9'] > dataframe['sma_200'])
