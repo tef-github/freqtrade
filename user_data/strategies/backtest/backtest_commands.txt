@@ -1,0 +1,9 @@
+source ./.env/bin/activate
+
+freqtrade download-data --config config3.json -t 5m --days 90
+
+freqtrade backtesting -c config3.json -s test_strategy
+
+freqtrade plot-dataframe -p BTC/USDT  --datadir user_data/data/binance/   --config config3.json  --strategy test_strategy
+
+scp -i backtest.pem ubuntu@15.156.80.236:/home/ubuntu/workspace/freqtrade/user_data/plot/freqtrade-plot-BTC_USDT-5m.html freqtrade-plot-BTC_USDT-5m.html
