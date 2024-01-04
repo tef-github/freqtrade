@@ -1,0 +1,60 @@
+========================================================== BACKTESTING REPORT =========================================================
+|     Pair |   Buys |   Avg Profit % |   Cum Profit % |   Tot Profit USDT |   Tot Profit % |   Avg Duration |   Win  Draw  Loss  Win% |
+|----------+--------+----------------+----------------+-------------------+----------------+----------------+-------------------------|
+| XMR/USDT |     18 |           0.40 |           7.21 |             0.722 |           0.07 | 1 day, 8:40:00 |    18     0     0   100 |
+|    TOTAL |     18 |           0.40 |           7.21 |             0.722 |           0.07 | 1 day, 8:40:00 |    18     0     0   100 |
+========================================================= ENTER TAG STATS ==========================================================
+|   TAG |   Buys |   Avg Profit % |   Cum Profit % |   Tot Profit USDT |   Tot Profit % |   Avg Duration |   Win  Draw  Loss  Win% |
+|-------+--------+----------------+----------------+-------------------+----------------+----------------+-------------------------|
+| TOTAL |     18 |           0.40 |           7.21 |             0.722 |           0.07 | 1 day, 8:40:00 |    18     0     0   100 |
+===================================================== EXIT REASON STATS =====================================================
+|   Exit Reason |   Exits |   Win  Draws  Loss  Win% |   Avg Profit % |   Cum Profit % |   Tot Profit USDT |   Tot Profit % |
+|---------------+---------+--------------------------+----------------+----------------+-------------------+----------------|
+|   exit_signal |      11 |     11     0     0   100 |           0.24 |           2.61 |             0.262 |           2.61 |
+|           roi |       7 |      7     0     0   100 |           0.66 |           4.6  |             0.46  |           4.6  |
+====================================================== LEFT OPEN TRADES REPORT ======================================================
+|   Pair |   Buys |   Avg Profit % |   Cum Profit % |   Tot Profit USDT |   Tot Profit % |   Avg Duration |   Win  Draw  Loss  Win% |
+|--------+--------+----------------+----------------+-------------------+----------------+----------------+-------------------------|
+|  TOTAL |      0 |           0.00 |           0.00 |             0.000 |           0.00 |           0:00 |     0     0     0     0 |
+===================== SUMMARY METRICS =====================
+| Metric                      | Value                     |
+|-----------------------------+---------------------------|
+| Backtesting from            | 2023-09-01 00:00:00       |
+| Backtesting to              | 2023-10-02 05:15:00       |
+| Max open trades             | 1                         |
+|                             |                           |
+| Total/Daily Avg Trades      | 18 / 0.58                 |
+| Starting balance            | 1000 USDT                 |
+| Final balance               | 1000.722 USDT             |
+| Absolute profit             | 0.722 USDT                |
+| Total profit %              | 0.07%                     |
+| CAGR %                      | 0.85%                     |
+| Profit factor               | 0.00                      |
+| Trades per day              | 0.58                      |
+| Avg. daily profit %         | 0.00%                     |
+| Avg. stake amount           | 10 USDT                   |
+| Total trade volume          | 180 USDT                  |
+|                             |                           |
+| Best Pair                   | XMR/USDT 7.21%            |
+| Worst Pair                  | XMR/USDT 7.21%            |
+| Best trade                  | XMR/USDT 1.00%            |
+| Worst trade                 | XMR/USDT 0.00%            |
+| Best day                    | 0.16 USDT                 |
+| Worst day                   | 0 USDT                    |
+| Days win/draw/lose          | 12 / 19 / 0               |
+| Avg. Duration Winners       | 1 day, 8:40:00            |
+| Avg. Duration Loser         | 0:00:00                   |
+| Rejected Entry signals      | 0                         |
+| Entry/Exit Timeouts         | 0 / 0                     |
+|                             |                           |
+| Min balance                 | 0 USDT                    |
+| Max balance                 | 0 USDT                    |
+| Max % of account underwater | 0.00%                     |
+| Absolute Drawdown (Account) | 0.00%                     |
+| Absolute Drawdown           | 0 USDT                    |
+| Drawdown high               | 0 USDT                    |
+| Drawdown low                | 0 USDT                    |
+| Drawdown Start              | 1970-01-01 00:00:00+00:00 |
+| Drawdown End                | 1970-01-01 00:00:00+00:00 |
+| Market change               | 3.98%                     |
+===========================================================

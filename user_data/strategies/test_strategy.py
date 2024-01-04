@@ -14,8 +14,17 @@ class test_strategy(IStrategy):
 
     timeframe = '5m'
 
-    # disabled
+    # disabled - 1000%
     minimal_roi = {"0": 10}
+
+    # minimal_roi = {
+    #     "80": 0.006,  # Exit after 20 minutes if there is at least 1.5% profit
+    #     "70": 0.007,  # Exit after 20 minutes if there is at least 1.5% profit
+    #     "60": 0.008,  # Exit immediately if there is at least 2% profit
+    #     "40": 0.010,  # Exit immediately if there is at least 2% profit
+    #     "20": 0.014,  # Exit immediately if there is at least 2% profit
+    #     "0": 0.018,  # Exit immediately if there is at least 2% profit
+    # }
 
     # disabled
     stoploss = -0.99
