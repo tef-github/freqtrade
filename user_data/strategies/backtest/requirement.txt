@@ -1,2 +1,4 @@
-- drawdown limit (future contract liquidation)
--
+1. Positive profit (Tot Profit) ignore force_exit
+2. Single trade at a time
+3. drawdown limit (future contract liquidation)
+4. natural market conditions - random (last 90 days from Jan is good)
