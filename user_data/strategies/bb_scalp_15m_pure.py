@@ -13,14 +13,14 @@ from freqtrade.strategy import IStrategy
 class bb_scalp_15m_pure(IStrategy):
     timeframe = '5m'
 
-    minimal_roi = {
-        "80": 0.006,  # Exit after 20 minutes if there is at least 1.5% profit
-        "70": 0.007,  # Exit after 20 minutes if there is at least 1.5% profit
-        "60": 0.008,  # Exit immediately if there is at least 2% profit
-        "40": 0.010,  # Exit immediately if there is at least 2% profit
-        "20": 0.014,  # Exit immediately if there is at least 2% profit
-        "0": 0.018,  # Exit immediately if there is at least 2% profit
-    }
+    # minimal_roi = {
+    #     "80": 0.006,  # Exit after 20 minutes if there is at least 1.5% profit
+    #     "70": 0.007,  # Exit after 20 minutes if there is at least 1.5% profit
+    #     "60": 0.008,  # Exit immediately if there is at least 2% profit
+    #     "40": 0.010,  # Exit immediately if there is at least 2% profit
+    #     "20": 0.014,  # Exit immediately if there is at least 2% profit
+    #     "0": 0.018,  # Exit immediately if there is at least 2% profit
+    # }
 
     # Stoploss:
     stoploss = -0.99
@@ -93,7 +93,7 @@ class bb_scalp_15m_pure(IStrategy):
         # Bollinger bands
         bollinger = qtpylib.bollinger_bands(qtpylib.typical_price(dataframe), window=20, stds=2)
         dataframe['bb_lowerband'] = bollinger['lower']
-        # dataframe['bb_middleband'] = bollinger['mid']
+        dataframe['bb_middleband'] = bollinger['mid']
         dataframe['bb_upperband'] = bollinger['upper']
 
         # SAR Parabol
@@ -112,7 +112,8 @@ class bb_scalp_15m_pure(IStrategy):
         """
         dataframe.loc[
             (
-                qtpylib.crossed_above(dataframe['close'], dataframe['bb_lowerband'])
+                qtpylib.crossed_above(dataframe['close'], dataframe['bb_middleband'])
+                # qtpylib.crossed_above(dataframe['close'], dataframe['bb_lowerband'])
                 # & (dataframe['rsi'] < 50)
                 # & (dataframe['ema_9'] > dataframe['sma_200'])
                 # & (dataframe['macdhist'] > -0.08)
