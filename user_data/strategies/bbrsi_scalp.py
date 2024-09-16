@@ -39,7 +39,7 @@ class bbrsi_scalp(WAOStrategy):
     # Experimental settings (configuration will overide these if set)
     use_exit_signal = True
     exit_profit_only = True
-    ignore_roi_if_entry_signal = True
+    ignore_roi_if_entry_signal = False
 
     # Optional order type mapping.
     order_types = {
